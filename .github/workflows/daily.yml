@@ -1,0 +1,91 @@
+name: daily
+
+on:
+  schedule:
+    - cron: "17 0 * * *"   # 北京时间 08:17 抓取
+    - cron: "17 3 * * *"   # 备份：若上一次没成功，补抓（已有当天快照则跳过）
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "重新抓取今天（覆盖已有快照）"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["site/**", "scripts/build.py", "config.json"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.build.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Scrape GitHub Trending
+        id: scrape
+        if: github.event_name != 'push'
+        run: python scripts/scrape.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Fetch repo metadata
+        if: steps.scrape.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/enrich.py
+
+      - name: Chinese summaries (skipped without LLM_API_KEY)
+        if: steps.scrape.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: python scripts/summarize.py
+
+      - name: Commit data
+        if: steps.scrape.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: $(date -u +%F)"
+          git pull --rebase --autostash
+          git push
+
+      - name: Build site
+        id: build
+        if: steps.scrape.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: |
+          python scripts/build.py
+          echo "deploy=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-pages-artifact@v5
+        if: steps.build.outputs.deploy == 'true'
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

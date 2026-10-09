@@ -1,0 +1,8 @@
+{
+"alibaba/open-code-review":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "915c2c98", "tags": ["AI 应用", "开发工具"], "zh": "基于 AI 智能体的高效安全代码审查工具，支持多语言和精确行级反馈。"},
+"anthropics/knowledge-work-plugins":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "86791d11", "tags": ["AI 应用"], "zh": "为 Claude Cowork 提供知识工作专用插件，定制自动化日常任务。"},
+"boykopovar/AnyPS5":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "ed539aee", "tags": ["系统与底层", "多媒体与游戏"], "zh": "自动将 PS5 可执行文件移植到 Linux 和 Windows，无需模拟器。"},
+"cathrynlavery/diagram-design":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "47d09e22", "tags": ["AI 应用", "Web 前端"], "zh": "为多种 AI 工具生成高质量语义化流程图和结构图，支持多格式导入导出。"},
+"mattpocock/skills":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "678bb0dc", "tags": ["AI 智能体", "开发工具"], "zh": "为 AI 智能体提供可组合的工程技能插件，提升开发效率。"},
+"morluto/rea":{"date": "2026-10-09", "model": "gh/gpt-4.1", "src": "9a2173ae", "tags": ["AI 智能体", "系统与底层"], "zh": "通过智能体对应用和二进制进行本地逆向分析，辅助功能复现。"}
+}

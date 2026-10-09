@@ -1,0 +1,20 @@
+{
+  "lists": [
+    {"key": "all", "name": "总榜", "path": "", "periods": ["daily", "weekly", "monthly"]},
+    {"key": "zh", "name": "中文项目", "path": "", "query": {"spoken_language_code": "zh"}, "periods": ["daily"]},
+    {"key": "python", "name": "Python", "path": "python", "periods": ["daily"]},
+    {"key": "jupyter", "name": "Jupyter", "path": "jupyter-notebook", "periods": ["daily"]},
+    {"key": "typescript", "name": "TypeScript", "path": "typescript", "periods": ["daily"]},
+    {"key": "javascript", "name": "JavaScript", "path": "javascript", "periods": ["daily"]},
+    {"key": "go", "name": "Go", "path": "go", "periods": ["daily"]},
+    {"key": "rust", "name": "Rust", "path": "rust", "periods": ["daily"]},
+    {"key": "java", "name": "Java", "path": "java", "periods": ["daily"]},
+    {"key": "cpp", "name": "C++", "path": "c++", "periods": ["daily"]}
+  ],
+  "llm": {
+    "default_base_url": "https://open.bigmodel.cn/api/paas/v4",
+    "default_model": "glm-4.7-flash",
+    "batch_size": 6,
+    "tags": ["AI 智能体", "大模型", "AI 应用", "开发工具", "Web 前端", "后端与云", "数据与数据库", "安全", "系统与底层", "移动与桌面", "学习资料", "科研", "多媒体与游戏", "其他"]
+  }
+}
