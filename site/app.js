@@ -98,7 +98,7 @@ function card(it, ctx) {
   if (it.gone) badges.push('<span class="badge gone">已删除或转私有</span>');
   if (ctx.daily) {
     if (it.new && ctx.hist) badges.push('<span class="badge new">首次上榜</span>');
-    if (it.st >= 2) badges.push(`<span class="badge streak">连续 ${it.st} 天</span>`);
+    if (it.st >= 2) badges.push(`<span class="badge streak" title="连续有效采样；疑似未更新日和无数据日期不计">连续 ${it.st} 次采样</span>`);
     if (it.n >= 2 && it.n > (it.st || 0)) badges.push(`<span class="badge total">累计 ${it.n} 天</span>`);
   }
   const facts = [];
@@ -209,8 +209,8 @@ async function viewStats() {
     <div class="kpis">
       <div class="kpi"><b>${num(INDEX.dates.length)}</b><span>收录天数（自 ${INDEX.dates[0]}）</span></div>
       <div class="kpi"><b>${num(stats.unique_repos)}</b><span>上过总榜的项目</span></div>
-      <div class="kpi"><b>${stats.size_30}</b><span>近 30 天总榜平均每天项目数</span></div>
-      <div class="kpi"><b>${stats.new_30}</b><span>近 30 天平均每天首次上榜</span></div>
+      <div class="kpi"><b>${stats.size_30}</b><span>近 30 个有效观测日平均项目数</span></div>
+      <div class="kpi"><b>${stats.new_30}</b><span>近 30 个有效观测日平均首次上榜</span></div>
     </div>
     <section class="panel">
       <h2>上榜天数排行 <span class="pills" id="win">${wins.map(([w, l]) => `<a class="pill ${w === 30 ? 'on' : ''}" data-w="${w}" href="javascript:">${l}</a>`).join('')}</span></h2>
@@ -229,13 +229,13 @@ async function viewStats() {
     </section>
     <div class="grid2">
       <section class="panel">
-        <h2>近 30 天热门话题</h2>
-        <p class="hint">上榜项目的 GitHub topics 出现次数（项目 × 天），括号内为再往前 30 天。</p>
+        <h2>近 30 个有效观测日热门话题</h2>
+        <p class="hint">上榜项目的 GitHub topics 出现次数（项目 × 有效观测日），括号内为前 30 个有效观测日。</p>
         <div class="rows" id="topics"></div>
       </section>
       <section class="panel">
         <h2>上榜项目最多的作者 / 组织</h2>
-        <p class="hint">上过总榜的不同项目数 · 累计上榜天数</p>
+        <p class="hint">上过总榜的不同项目数 · 累计项目上榜天数</p>
         <div class="rows" id="owners"></div>
       </section>
     </div>`;
@@ -320,7 +320,7 @@ async function viewRepo(name) {
     ${a ? `<div class="statline">
       <div class="kpi"><b>${a.n}</b><span>总榜上榜天数</span></div>
       <div class="kpi"><b>#${a.b}</b><span>最好名次</span></div>
-      <div class="kpi"><b>${a.ms}</b><span>最长连续天数</span></div>
+      <div class="kpi"><b>${a.ms}</b><span>最长连续有效采样</span></div>
       <div class="kpi"><b>${a.f}</b><span>首次上榜</span></div>
       <div class="kpi"><b>${a.l}</b><span>最近上榜</span></div>
     </div>` : '<p class="notice">还没上过总榜。</p>'}
@@ -387,7 +387,8 @@ function viewAbout() {
       自己抓取从 ${esc(INDEX.live_since || '–')} 开始。</p>
     <h2>统计口径</h2>
     <ul>
-      <li>上榜天数、连续天数只算总榜“今日”榜。若某天总榜与前一天完全相同，视为 GitHub 端未更新，不计入（目前共 ${INDEX.stale.length} 天，含 2025-11-13 至 12-04 的故障期）。</li>
+      <li>上榜次数按各日榜分别计算；项目页的主要指标和统计排行使用总榜“今日”榜。总榜与上一个有数据日期完全相同时，标为疑似未更新（目前共 ${INDEX.stale.length} 天），该日各日榜不计数。</li>
+      <li>连续次数按相邻有效采样计算，会跳过疑似未更新日和缺失日期，不代表严格连续的日历天数。上榜排行的近 30/90/365 天按日历日期筛选；热门话题及平均项目数使用最近 30 个有效观测日。</li>
       <li>改过名的仓库合并到新名字下；已删除或转私有的仓库保留记录。</li>
       <li>AI 相关占比按关键词估计，只适合看趋势。</li>
     </ul>
@@ -404,7 +405,7 @@ function viewAbout() {
     view.innerHTML = `<p class="empty">数据加载失败：${esc(e.message)}</p>`;
     return;
   }
-  document.getElementById('foot').innerHTML = `数据更新于 ${localTime(INDEX.generated)} · 来源 GitHub Trending · <a href="${SOURCE_REPO}" target="_blank" rel="noopener">源码</a>`;
+  document.getElementById('foot').innerHTML = `最新榜单 ${INDEX.latest}（UTC） · 网页生成于 ${localTime(INDEX.generated)} · 来源 GitHub Trending · <a href="${SOURCE_REPO}" target="_blank" rel="noopener">源码</a>`;
   document.getElementById('search-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const q = document.getElementById('search').value.trim();

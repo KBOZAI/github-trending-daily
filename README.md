@@ -4,14 +4,14 @@
 
 **网页：** https://kbozai.github.io/github-trending-daily/
 
-- **榜单**：按天浏览总榜（今日 / 本周 / 本月）、中文项目榜和 8 个语言榜；标出首次上榜、连续上榜天数、累计上榜天数
-- **统计**：上榜天数排行、AI 相关项目占比、编程语言占比的月度趋势、近 30 天热门话题、上榜最多的作者 / 组织
+- **榜单**：按天浏览总榜（今日 / 本周 / 本月）、中文项目榜和 8 个语言榜；标出首次上榜、连续有效采样、累计上榜天数
+- **统计**：上榜天数排行、AI 相关项目占比、编程语言占比的月度趋势、最近有效观测日的热门话题、上榜最多的作者 / 组织
 - **项目页**：某个项目的历次名次和星数变化；可搜索所有上过榜的项目
 - **历史回填**：2023-09-09 起的总榜来自 [antonkomarev/github-trending-archive](https://github.com/antonkomarev/github-trending-archive)（MIT，只有排名），所以统计从第一天起就有三年的数据
 
 ## 怎么运行的
 
-GitHub Actions 每天 UTC 00:17（北京时间 08:17）跑一次 `.github/workflows/daily.yml`，03:17 再跑一次作为备份：
+GitHub Actions 每天 UTC 00:17（北京时间 08:17）跑一次 `.github/workflows/daily.yml`，03:17 再跑一次作为备份。已有当天快照时跳过采集，仍重新构建和部署；摘要需要另行补跑：
 
 | 步骤 | 脚本 | 产出 |
 |---|---|---|
@@ -24,13 +24,13 @@ GitHub Actions 每天 UTC 00:17（北京时间 08:17）跑一次 `.github/workfl
 
 ## 开启中文简介
 
-简介由任意 OpenAI 兼容接口的大模型生成，默认用智谱免费的 GLM-4.7-Flash。没配置时网页显示英文原文简介，其余功能不受影响。
+简介由任意 OpenAI 兼容接口的大模型生成，默认模型配置为智谱 GLM-4.7-Flash；使用前请核实提供方当前的可用性与计费。没配置时网页显示原文简介及已有缓存，其余功能不受影响。
 
 1. 在 [bigmodel.cn](https://bigmodel.cn) 申请 API key
 2. 仓库 Settings → Secrets and variables → Actions → 新建 secret `LLM_API_KEY`
 3. 换别的模型时，再加 variables `LLM_BASE_URL`（如 `https://api.deepseek.com/v1`）和 `LLM_MODEL`
 
-只给当天新出现的项目生成，结果缓存，每天大约几十次调用。给历史项目补简介：`python scripts/summarize.py --backfill 500`。
+默认为最新快照中缺摘要或简介变化的项目生成，结果按简介 hash 缓存，每批最多 6 项。给历史项目补简介：`python scripts/summarize.py --backfill 500`；试跑可加 `--limit 6`。
 
 ## 本地运行
 
@@ -45,10 +45,18 @@ cd site && python -m http.server 8000
 ## 数据口径
 
 - 日期按抓取时的 UTC 日期记。GitHub 的“今日”榜是过去 24 小时的滚动窗口。
-- 某天总榜与前一天完全相同时，视为 GitHub 端没有更新（例如 2025-11-13 至 12-04 的故障），网页上照常显示，但不计入上榜天数和连续天数。
+- 某天总榜经改名映射后与上一个有数据日期完全相同时，标为疑似未更新；网页照常显示，但该日所有 daily 榜不计入次数。这是启发式判断。
+- 连续次数按相邻有效采样计算，跳过疑似未更新日和缺失日期，不代表严格连续的日历天数。
+- 上榜 Top20 的 30/90/365 天按日历日期筛选；热门话题、平均项目数及平均首次上榜数使用最近 30 个有效观测日。
 - 改过名的仓库合并到新名字下；已删除或转私有的仓库保留记录。
 - AI 相关占比按名称、简介、话题里的关键词估计，看趋势用。
 - 回填的历史数据只有排名；这些天显示的简介、语言、星数是现在的数据。
+
+## 首次发布及自定义域名
+
+仓库启用 GitHub Actions；Settings → Pages → Source 选择 GitHub Actions。`main` 的网页、脚本或工作流变更会构建部署已有数据；Actions → daily → Run workflow 可手动验证当天采集和发布。
+
+网页和采集都由 GitHub 托管，无需自备服务器。自定义子域名也可继续使用 Pages：先在 Pages 设置填写域名，再在 DNS 服务商添加指向 `kbozai.github.io` 的 CNAME（不含仓库路径），等待 DNS 与 HTTPS 生效。步骤见 [GitHub 官方说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。
 
 ## 许可
 

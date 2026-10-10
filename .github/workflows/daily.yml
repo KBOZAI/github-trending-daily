@@ -3,7 +3,7 @@ name: daily
 on:
   schedule:
     - cron: "17 0 * * *"   # 北京时间 08:17 抓取
-    - cron: "17 3 * * *"   # 备份：若上一次没成功，补抓（已有当天快照则跳过）
+    - cron: "17 3 * * *"   # 备份：已有当天快照时跳过采集，仍重新构建和部署
   workflow_dispatch:
     inputs:
       force:
@@ -12,7 +12,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ["site/**", "scripts/build.py", "config.json"]
+    paths: ["site/**", "scripts/**", "config.json", "requirements.txt", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -26,15 +26,21 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     outputs:
       deploy: ${{ steps.build.outputs.deploy }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
 
       - name: Scrape GitHub Trending
         id: scrape
@@ -69,7 +75,6 @@ jobs:
 
       - name: Build site
         id: build
-        if: steps.scrape.outputs.changed == 'true' || github.event_name != 'schedule'
         run: |
           python scripts/build.py
           echo "deploy=true" >> "$GITHUB_OUTPUT"
@@ -83,6 +88,7 @@ jobs:
     needs: update
     if: needs.update.outputs.deploy == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
