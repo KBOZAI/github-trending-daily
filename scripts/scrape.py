@@ -1,7 +1,7 @@
 """Fetch the GitHub Trending pages listed in config.json and save today's snapshot.
 
 Usage: python scripts/scrape.py [--force] [--date YYYY-MM-DD]
-Skips when today's snapshot already exists (the workflow runs twice a day as a fallback).
+Skips when today's snapshot already exists, so repeated Codex runs preserve the original sample.
 """
 import argparse
 import json

@@ -451,7 +451,7 @@ function viewAbout() {
     <p>每天自动收集 <a href="https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a> 热榜，配上中文简介，记录每个项目的上榜历史，并做长期统计。</p>
     <h2>数据怎么来的</h2>
     <ul>
-      <li>每天 UTC 00:17（北京时间 08:17）由 GitHub Actions 抓取：总榜（今日 / 本周 / 本月）、中文项目榜，以及 Python、Jupyter、TypeScript、JavaScript、Go、Rust、Java、C++ 语言榜。</li>
+      <li>每天由 Codex 定时任务抓取：总榜（今日 / 本周 / 本月）、中文项目榜，以及 Python、Jupyter、TypeScript、JavaScript、Go、Rust、Java、C++ 语言榜；构建后发布到 GitHub Pages。</li>
       <li>用 GitHub API 补充话题、创建时间、许可证等信息；项目中文介绍根据公开简介与 README 整理，说明做什么、具体用途及适用人群，详情页提供资料来源。</li>
       <li>每天独立记录所有已收录且可访问仓库的总 Stars，项目离榜后仍继续跟踪。点项目名或“Stars 趋势”即可查看曲线。</li>
       <li>日期按抓取时的 UTC 日期记；GitHub 的“今日”榜是过去 24 小时的滚动窗口。</li>
