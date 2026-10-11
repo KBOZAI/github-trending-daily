@@ -12,8 +12,8 @@ import collections
 import re
 import shutil
 
-from common import (BACKFILL_FILE, CONFIG, META_FILE, SITE_DATA, SUMMARY_FILE, iter_snapshots, load_json,
-                    save_json, utc_now)
+from common import (BACKFILL_FILE, CONFIG, META_FILE, SITE_DATA, SUMMARY_FILE, iter_snapshots,
+                    iter_star_snapshots, load_json, save_json, utc_now)
 
 AI_RE = re.compile(
     r"\b(ai|aigc|genai|llms?|gpt\w*|chatgpt|openai|claude|gemini|llama\w*|deepseek|qwen\w*|mistral|"
@@ -61,7 +61,12 @@ def main():
     last_date = {}                               # list -> last non-stale date with data
     first_date = {}                              # list -> first date with data
     repos = {}
-    stars_hist = collections.defaultdict(list)
+    stars_hist = collections.defaultdict(dict)
+    # API observations take precedence over the earlier Trending sample of the same UTC day.
+    for snap in iter_star_snapshots():
+        for name, stars in snap.get("stars", {}).items():
+            if type(stars) is int and stars >= 0:
+                stars_hist[canon(name)][snap["date"]] = stars
     lists_cfg = {f"{l['key']}:{p}" for l in CONFIG["lists"] for p in l["periods"]}
 
     SITE_DATA.mkdir(parents=True, exist_ok=True)
@@ -85,13 +90,21 @@ def main():
                     "rank": it["rank"], "repo": c,
                     "desc": it.get("desc") if day["src"] == "live" else m.get("desc", ""),
                     "zh": s.get("zh", ""), "tags": s.get("tags", []),
+                    "intro": s.get("intro", {}),
                     "lang": it.get("lang") if day["src"] == "live" else m.get("lang"),
                     "topics": m.get("topics", [])[:5], "created": m.get("created"),
                 }
                 if day["src"] == "live":
                     row.update(stars=it.get("stars"), forks=it.get("forks"), gained=it.get("gained"))
+                    observed = stars_hist.get(c, {})
+                    if observed:
+                        observed_date = max(observed)
+                        row.update(stars_latest=observed[observed_date], stars_latest_date=observed_date)
                 else:
-                    row["stars_now"] = m.get("stars")
+                    observed = stars_hist.get(c, {})
+                    observed_date = max(observed) if observed else m.get("fetched")
+                    row["stars_now"] = observed[observed_date] if observed else m.get("stars")
+                    row["stars_now_date"] = observed_date
                 if m.get("missing"):
                     row["gone"] = True
                 if daily:
@@ -111,9 +124,7 @@ def main():
                         row.update(n=st["n"], st=st["streak"] if today else 0, new=today and st["n"] == 1)
                 out_items.append(row)
                 if day["src"] == "live" and it.get("stars") is not None:
-                    hist = stars_hist[c]
-                    if not hist or hist[-1][0] != didx[d]:
-                        hist.append([didx[d], it["stars"]])
+                    stars_hist[c].setdefault(d, it["stars"])
                 repos.setdefault(c, it["repo"])
             out_lists[key] = {"hist": first_date[key] < d, "items": out_items}
             if daily and not day["stale"] and items:
@@ -123,7 +134,11 @@ def main():
             out["captured_at"] = day["captured_at"]
         save_json(days_dir / f"{d}.json", out, compact=True)
 
-    # ---- repos.json ----
+    stars_dir = SITE_DATA / "stars"
+    shutil.rmtree(stars_dir, ignore_errors=True)
+    stars_dir.mkdir()
+
+    # ---- repos.json (history is loaded per project, keeping the search index small) ----
     latest_live = {}
     for d in dates:
         if days[d]["src"] == "live":
@@ -136,6 +151,7 @@ def main():
         live = latest_live.get(c, {})
         r = {
             "d": live.get("desc") or m.get("desc", ""), "zh": s.get("zh", ""), "tags": s.get("tags", []),
+            "intro": s.get("intro", {}), "intro_source": s.get("source", {}), "intro_date": s.get("date"),
             "l": live.get("lang") or m.get("lang"), "s": live.get("stars") or m.get("stars"),
             "c": m.get("created"), "t": m.get("topics", []), "lic": m.get("license"), "hp": m.get("homepage", ""),
         }
@@ -148,7 +164,15 @@ def main():
         if other:
             r["o"] = other
         if stars_hist.get(c):
-            r["sh"] = stars_hist[c]
+            points = sorted(stars_hist[c].items())
+            owner, name = c.split("/", 1)
+            if owner in (".", "..") or name in (".", "..") or "/" in name:
+                raise ValueError(f"Invalid repository name: {c}")
+            file = f"stars/{owner}/{name}.json"
+            save_json(SITE_DATA / file, {"repo": c, "points": points}, compact=True)
+            r["s"] = points[-1][1]
+            r["star_history"] = {"file": file, "count": len(points),
+                                 "first": points[0][0], "last": points[-1][0]}
         repo_out[c] = r
     save_json(SITE_DATA / "repos.json", repo_out, compact=True)
 

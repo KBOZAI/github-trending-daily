@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SNAPSHOTS = DATA / "snapshots"
+STAR_SNAPSHOTS = DATA / "stars"
 BACKFILL_FILE = DATA / "backfill" / "antonkomarev" / "all-daily.json"
 META_FILE = DATA / "repos" / "meta.json"
 SUMMARY_FILE = DATA / "repos" / "summaries.json"
@@ -35,6 +36,15 @@ def snapshot_path(date):
 
 def iter_snapshots():
     for p in sorted(SNAPSHOTS.glob("*/*.json")):
+        yield json.loads(p.read_text(encoding="utf-8"))
+
+
+def star_snapshot_path(date):
+    return STAR_SNAPSHOTS / date[:4] / f"{date}.json"
+
+
+def iter_star_snapshots():
+    for p in sorted(STAR_SNAPSHOTS.glob("*/*.json")):
         yield json.loads(p.read_text(encoding="utf-8"))
 
 

@@ -28,6 +28,7 @@ const CHART_COLORS = { TypeScript: '#8b5cf6' };
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const num = (n) => (n == null ? '–' : n.toLocaleString('zh-CN'));
 const short = (n) => (n == null ? '–' : n >= 1e4 ? `${(n / 1e4).toFixed(n >= 1e5 ? 0 : 1)}万` : n.toLocaleString('zh-CN'));
+const signed = (n) => (n > 0 ? '+' : '') + num(n);
 const localTime = (iso) => new Date(iso).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const langDot = (lang) => `<span class="lang"><i class="dot" style="background:${LANG_COLORS[lang] || '#9aa1a9'}"></i>${esc(lang)}</span>`;
@@ -59,8 +60,11 @@ function mkChart(id, option) {
   const fg = css('--muted');
   const line = css('--line');
   const axis = { axisLabel: { color: fg }, axisLine: { lineStyle: { color: line } }, splitLine: { lineStyle: { color: line } } };
-  for (const k of ['xAxis', 'yAxis']) if (option[k]) option[k] = { ...axis, ...option[k] };
-  chart.setOption({ textStyle: { fontFamily: 'inherit' }, animationDuration: 400, ...option });
+  for (const k of ['xAxis', 'yAxis']) if (option[k]) option[k] = { ...axis, ...option[k],
+    axisLabel: { ...axis.axisLabel, ...option[k].axisLabel } };
+  if (option.tooltip) option.tooltip = { backgroundColor: css('--panel'), borderColor: line,
+    textStyle: { color: css('--fg') }, ...option.tooltip };
+  chart.setOption({ useUTC: true, textStyle: { fontFamily: 'inherit' }, animationDuration: 400, ...option });
   charts.push(chart);
 }
 
@@ -103,19 +107,24 @@ function card(it, ctx) {
   }
   const facts = [];
   if (it.lang) facts.push(langDot(it.lang));
-  if (it.stars != null) facts.push(`<span title="总星数">★ ${short(it.stars)}</span>`);
-  else if (it.stars_now != null) facts.push(`<span title="现在的总星数（非当天）">★ ${short(it.stars_now)}（现在）</span>`);
   if (it.forks != null) facts.push(`<span title="Fork 数">⑂ ${short(it.forks)}</span>`);
   if (it.created) facts.push(`<span title="仓库创建日期 ${esc(it.created)}">创建于 ${esc(it.created.slice(0, 7))}</span>`);
   (it.tags || []).forEach((t) => facts.push(`<span class="tag">${esc(t)}</span>`));
   (it.topics || []).slice(0, 4).forEach((t) => facts.push(`<span class="topic">${esc(t)}</span>`));
-  facts.push(`<a class="more" href="${repoLink(it.repo)}">上榜记录 →</a>`);
-  const gain = it.gained != null
-    ? `<div class="gain"><b>+${num(it.gained)}</b><span>${GAIN[ctx.period]}</span></div>` : '<div></div>';
+  facts.push(`<a class="github-link" href="https://github.com/${esc(it.repo)}" target="_blank" rel="noopener">GitHub ↗</a>`);
+  const latestTotal = ctx.latest && it.stars_latest != null;
+  const total = latestTotal ? it.stars_latest : it.stars ?? it.stars_now;
+  const metrics = `<div class="card-metrics">
+    <div class="star-total" title="${latestTotal ? `最新总 Stars 记录于 ${it.stars_latest_date} UTC；新增 Stars 来自该榜单的采样` : it.stars != null ? '榜单采集时的总 Stars' : `最近记录于 ${it.stars_now_date || '–'}，不是历史当天的星数`}"><span>${it.stars != null ? '总 Stars' : '最新记录总 Stars'}</span><b>${num(total)}</b></div>
+    ${it.gained != null ? `<div class="star-gain"><span>${GAIN[ctx.period]}</span><b>${signed(it.gained)}</b></div>` : ''}
+    <a class="trend-link" href="${repoLink(it.repo)}">Stars 趋势 <span>↗</span></a>
+  </div>`;
   return `<article class="card"><div class="rank">${it.rank}</div><div class="body">
-    <div class="name"><a href="https://github.com/${esc(it.repo)}" target="_blank" rel="noopener"><span class="owner">${esc(owner)} / </span>${esc(name)}</a><span class="badges">${badges.join('')}</span></div>
-    ${it.zh ? `<p class="zh">${esc(it.zh)}</p>` : ''}${it.desc ? `<p class="desc">${esc(it.desc)}</p>` : ''}
-    <div class="facts">${facts.join('')}</div></div>${gain}</article>`;
+    <div class="name"><a href="${repoLink(it.repo)}"><span class="owner">${esc(owner)} / </span>${esc(name)}</a><span class="badges">${badges.join('')}</span></div>
+    ${it.zh ? `<p class="zh">${esc(it.zh)}</p>` : ''}
+    ${it.intro?.use_cases?.length ? `<p class="card-use"><span>用途</span>${esc(it.intro.use_cases[0])}</p>` : ''}
+    ${!it.zh && it.desc ? `<p class="desc">${esc(it.desc)}</p>` : ''}
+    <div class="facts">${facts.join('')}</div></div>${metrics}</article>`;
 }
 
 async function viewDay(date, params) {
@@ -124,6 +133,7 @@ async function viewDay(date, params) {
   let list = params.get('list') || 'all';
   let period = params.get('period') || 'daily';
   const tag = params.get('tag') || '';
+  const sort = ['rank', 'stars', 'gained'].includes(params.get('sort')) ? params.get('sort') : 'rank';
   const day = await getJSON(`days/${date}.json`);
   if (!day.lists[`${list}:${period}`]) { list = 'all'; period = 'daily'; }
   const L = day.lists[`${list}:${period}`];
@@ -146,7 +156,10 @@ async function viewDay(date, params) {
   const tagPills = Object.keys(tagCount).length > 1
     ? `<div class="pills">${[['', '全部', items.length], ...Object.entries(tagCount).sort((a, b) => b[1] - a[1]).map(([t, c]) => [t, t, c])]
       .map(([t, label, c]) => `<a class="pill ${t === tag ? 'on' : ''}" href="${dayHref(date, list, period, t)}">${esc(label)}<span class="c">${c}</span></a>`).join('')}</div>` : '';
-  const shown = tag ? items.filter((it) => (it.tags || []).includes(tag)) : items;
+  const shown = (tag ? items.filter((it) => (it.tags || []).includes(tag)) : [...items]);
+  const totalStars = (it) => (date === INDEX.latest ? it.stars_latest : null) ?? it.stars ?? it.stars_now ?? -1;
+  if (sort === 'stars') shown.sort((a, b) => totalStars(b) - totalStars(a) || a.rank - b.rank);
+  if (sort === 'gained') shown.sort((a, b) => (b.gained ?? -1) - (a.gained ?? -1) || a.rank - b.rank);
   const daily = period === 'daily';
   const newCount = items.filter((it) => it.new).length;
 
@@ -158,6 +171,10 @@ async function viewDay(date, params) {
   if (day.src === 'backfill') notices.push('这一天来自历史归档，只记录了排名；简介、语言和星数是现在的数据。');
 
   view.innerHTML = `
+    <section class="day-intro">
+      <div><p class="eyebrow">GITHUB TRENDING · ${date} UTC</p><h1>发现开源，追踪增长</h1><p class="intro-copy">了解项目做什么、有什么用，查看总 Stars 与长期变化。</p></div>
+      <span class="source-badge"><i></i>${day.src === 'live' ? '实抓榜单' : '历史排名归档'}</span>
+    </section>
     <div class="bar">
       <div class="datenav">
         <a class="btn" href="${prev ? dayHref(prev, list, period) : '#'}" ${prev ? '' : 'disabled'} title="前一天（←）">‹</a>
@@ -171,14 +188,24 @@ async function viewDay(date, params) {
     ${periodPills ? `<div style="margin-top:8px">${periodPills}</div>` : ''}
     ${notices.map((n) => `<p class="notice">${n}</p>`).join('')}
     ${tagPills ? `<div style="margin-top:12px">${tagPills}</div>` : ''}
+    <div class="list-toolbar"><span>${esc(cfg?.name || '总榜')} · ${PERIOD[period]} · ${shown.length} 个项目</span><label>排序 <select id="sort" aria-label="项目排序">
+      <option value="rank" ${sort === 'rank' ? 'selected' : ''}>Trending 排名</option>
+      <option value="stars" ${sort === 'stars' ? 'selected' : ''}>总 Stars</option>
+      <option value="gained" ${sort === 'gained' ? 'selected' : ''} ${items.some((it) => it.gained != null) ? '' : 'disabled'}>新增 Stars</option>
+    </select></label></div>
     <div class="cards" style="margin-top:14px">${shown.length
-      ? shown.map((it) => card(it, { daily, hist: L.hist, period })).join('')
+      ? shown.map((it) => card(it, { daily, hist: L.hist, period, latest: date === INDEX.latest })).join('')
       : '<p class="empty">这一天这个榜单没有项目。</p>'}</div>`;
 
   document.getElementById('date').addEventListener('change', (e) => {
     const want = e.target.value;
     const pick = [...dates].reverse().find((d) => d <= want) || dates[0];
     location.hash = dayHref(pick, list, period);
+  });
+  document.getElementById('sort').addEventListener('change', (e) => {
+    const q = new URLSearchParams(params);
+    if (e.target.value === 'rank') q.delete('sort'); else q.set('sort', e.target.value);
+    location.hash = `#/day/${date}${q.size ? '?' + q.toString() : ''}`;
   });
   view.dataset.prev = prev ? dayHref(prev, list, period) : '';
   view.dataset.next = next ? dayHref(next, list, period) : '';
@@ -291,31 +318,59 @@ async function viewStats() {
 // ---------- repo view ----------
 async function viewRepo(name) {
   const repos = await getJSON('repos.json');
-  let key = name;
-  if (!repos[key]) key = Object.keys(repos).find((k) => k.toLowerCase() === name.toLowerCase());
+  const key = repos[name] ? name : Object.keys(repos).find((k) => k.toLowerCase() === name.toLowerCase());
   const r = repos[key];
   if (!r) {
     view.innerHTML = `<p class="empty">没有 ${esc(name)} 的上榜记录。<a href="https://github.com/${esc(name)}" target="_blank" rel="noopener">去 GitHub 看看 →</a></p>`;
     return;
   }
+  let points = [];
+  let historyFailed = false;
+  if (r.star_history) {
+    try { points = (await getJSON(r.star_history.file)).points; }
+    catch (e) { historyFailed = true; console.warn(e.message); }
+  }
+  const first = points[0];
+  const last = points[points.length - 1];
+  const delta = points.length > 1 ? last[1] - first[1] : null;
   const facts = [];
   if (r.l) facts.push(langDot(r.l));
-  if (r.s != null) facts.push(`<span>★ ${num(r.s)}</span>`);
-  if (r.c) facts.push(`<span>创建于 ${esc(r.c)}</span>`);
+  if (r.c) facts.push(`<span>仓库创建 ${esc(r.c)}</span>`);
   if (r.lic && r.lic !== 'NOASSERTION') facts.push(`<span>${esc(r.lic)}</span>`);
-  if (r.hp) facts.push(`<a href="${esc(r.hp)}" target="_blank" rel="noopener">主页</a>`);
+  if (r.hp) facts.push(`<a href="${esc(r.hp)}" target="_blank" rel="noopener">项目主页 ↗</a>`);
   (r.tags || []).forEach((t) => facts.push(`<span class="tag">${esc(t)}</span>`));
   (r.t || []).forEach((t) => facts.push(`<span class="topic">${esc(t)}</span>`));
   const a = r.a;
   const listName = Object.fromEntries(INDEX.lists.map((l) => [`${l.key}:daily`, l.name]));
   const others = Object.entries(r.o || {}).map(([k, n]) => `${esc(listName[k] || k)} ${n} 天`).join(' · ');
-
   view.innerHTML = `
+    <div class="breadcrumb"><a href="${dayHref(INDEX.latest)}">← 返回榜单</a><a href="https://github.com/${esc(key)}" target="_blank" rel="noopener">在 GitHub 打开 ↗</a></div>
     <section class="panel repo-head">
-      <h1><a href="https://github.com/${esc(key)}" target="_blank" rel="noopener">${esc(key)}</a>
-        ${r.gone ? '<span class="badge gone">已删除或转私有</span>' : ''}</h1>
+      <div class="repo-intro"><p class="eyebrow">PROJECT / STARS</p><h1>${esc(key)} ${r.gone ? '<span class="badge gone">已删除或转私有</span>' : ''}</h1>
       ${r.zh ? `<p class="zh">${esc(r.zh)}</p>` : ''}${r.d ? `<p class="desc">${esc(r.d)}</p>` : ''}
-      <div class="facts">${facts.join('')}</div>
+      <div class="facts">${facts.join('')}</div></div>
+      <div class="repo-star-total"><span>最新记录总 Stars</span><b>${num(r.s)}</b><small>${r.star_history ? `${r.star_history.last} UTC` : '来自现存元信息缓存'}</small></div>
+    </section>
+    <section class="panel project-guide">
+      <div class="section-heading"><div><p class="eyebrow">PROJECT GUIDE</p><h2>这个项目能做什么</h2></div></div>
+      ${r.intro?.what ? `<p class="project-what">${esc(r.intro.what)}</p>
+      <div class="guide-grid">
+        ${r.intro.use_cases?.length ? `<div><h3>可以用来</h3><ul>${r.intro.use_cases.map((s) => `<li>${esc(s)}</li>`).join('')}</ul></div>` : ''}
+        ${r.intro.audience ? `<div><h3>适合谁</h3><p>${esc(r.intro.audience)}</p></div>` : ''}
+      </div>
+      <p class="guide-source">根据项目公开资料整理${r.intro_source?.url ? ` · <a href="${esc(r.intro_source.url)}" target="_blank" rel="noopener">查看原始资料 ↗</a>` : ''}${r.intro_date ? ` · ${esc(r.intro_date)} 更新` : ''}</p>`
+      : `<p class="project-what">${esc(r.zh || r.d || '项目尚未提供可用简介。')}</p><p class="guide-source">${r.zh ? '现有中文简介' : '项目原文简介'} · <a href="https://github.com/${esc(key)}#readme" target="_blank" rel="noopener">查看 README ↗</a></p>`}
+    </section>
+    <section class="panel stars-panel">
+      <div class="section-heading"><div><p class="eyebrow">STAR HISTORY</p><h2>Stars 数量变化</h2></div>
+      <div class="pills" id="star-window" aria-label="Stars 图表时间范围">${[[7, '7 天'], [30, '30 天'], [90, '90 天'], [0, '全部记录']].map(([w, label]) => `<button type="button" class="pill ${w === 0 ? 'on' : ''}" data-days="${w}">${label}</button>`).join('')}</div></div>
+      <div class="star-overview">
+        <div><span>首次记录</span><b>${first ? num(first[1]) : '–'}</b><small>${first ? first[0] : '暂无采样'}</small></div>
+        <div><span>记录以来净变化</span><b class="${delta != null && delta >= 0 ? 'up' : ''}">${delta == null ? '–' : signed(delta)}</b><small>${delta != null && first[1] > 0 ? `${signed(Number((100 * delta / first[1]).toFixed(1)))}%` : '需要至少两个观测日'}</small></div>
+        <div><span>实际观测日</span><b>${points.length}</b><small>每日独立记录总 Stars</small></div>
+      </div>
+      ${points.length ? '<div class="chart" id="c-stars"></div><p class="hint star-caption" id="star-caption"></p>' : `<div class="chart-empty">${historyFailed ? 'Stars 记录暂时加载失败，请刷新重试。' : '尚无可用 Stars 观测，采集到后会在这里显示。'}</div>`}
+      <p class="data-note">从本站首次记录该项目时开始追踪；项目离榜后仍继续每日采样。早期排名归档没有历史 Stars，不补造观测值。${points.length === 1 ? '目前只有一个观测日，先显示单点，获得下一次采样后即可连成折线。' : ''}</p>
     </section>
     ${a ? `<div class="statline">
       <div class="kpi"><b>${a.n}</b><span>总榜上榜天数</span></div>
@@ -323,28 +378,46 @@ async function viewRepo(name) {
       <div class="kpi"><b>${a.ms}</b><span>最长连续有效采样</span></div>
       <div class="kpi"><b>${a.f}</b><span>首次上榜</span></div>
       <div class="kpi"><b>${a.l}</b><span>最近上榜</span></div>
-    </div>` : '<p class="notice">还没上过总榜。</p>'}
+    </div>` : '<p class="notice">该项目目前只收录于分榜。</p>'}
     ${others ? `<p class="summary">其他榜单：${others}</p>` : ''}
-    ${a ? '<section class="panel"><h2>总榜名次</h2><p class="hint">每个点是一天，越靠上名次越高。</p><div class="chart" id="c-rank" style="height:260px"></div></section>' : ''}
-    ${r.sh && r.sh.length > 1 ? '<section class="panel"><h2>总星数</h2><p class="hint">来自每天抓取时的星数。</p><div class="chart" id="c-stars" style="height:240px"></div></section>' : ''}`;
-
+    ${a ? '<section class="panel"><h2>总榜名次记录</h2><p class="hint">每个点是一个有效上榜日，越靠上名次越高。</p><div class="chart" id="c-rank" style="height:260px"></div></section>' : ''}`;
+  if (points.length) {
+    const renderStars = (days) => {
+      const cut = days ? Date.parse(last[0]) - (days - 1) * 864e5 : -Infinity;
+      const selected = points.filter(([date]) => Date.parse(date) >= cut);
+      const current = charts.find((c) => c.getDom().id === 'c-stars');
+      if (current) { current.dispose(); charts = charts.filter((c) => c !== current); }
+      mkChart('c-stars', {
+        grid: { left: 76, right: 30, top: 24, bottom: 44 },
+        tooltip: { trigger: 'axis', confine: true, valueFormatter: (v) => `${num(v)} Stars` },
+        xAxis: { type: 'time', minInterval: 864e5,
+          axisLabel: { hideOverlap: true, formatter: (v) => new Date(v).toISOString().slice(5, 10) } },
+        yAxis: { type: 'value', scale: true, minInterval: 1, axisLabel: { formatter: (v) => num(v), color: css('--muted') } },
+        series: [{ name: '总 Stars', type: 'line', smooth: false, showSymbol: selected.length < 45,
+          symbol: 'circle', symbolSize: 9, color: css('--accent'), lineStyle: { width: 3 },
+          areaStyle: { opacity: 0.08 }, data: selected.map(([date, stars]) => [date, stars]) }],
+      });
+      document.getElementById('star-caption').textContent = `${selected[0][0]} 至 ${selected[selected.length - 1][0]} · ${selected.length} 个 UTC 观测日 · 连线连接实际采样点，缺失日期不补值`;
+    };
+    renderStars(0);
+    document.getElementById('star-window').addEventListener('click', (e) => {
+      const button = e.target.closest('[data-days]');
+      if (!button) return;
+      document.querySelectorAll('#star-window button').forEach((b) => b.classList.toggle('on', b === button));
+      renderStars(Number(button.dataset.days));
+    });
+  } else {
+    document.querySelectorAll('#star-window button').forEach((b) => { b.disabled = true; });
+  }
   if (a) {
-    const maxRank = Math.max(10, ...a.h.map(([, rk]) => rk));
+    const maxRank = Math.max(10, ...a.h.map(([, rank]) => rank));
     mkChart('c-rank', {
       grid: { left: 36, right: 16, top: 12, bottom: 28 },
-      tooltip: { trigger: 'item', formatter: (p) => `${p.value[0]}<br>第 ${p.value[1]} 名` },
+      tooltip: { trigger: 'item', confine: true, formatter: (p) => `${p.value[0]}<br>第 ${p.value[1]} 名` },
       xAxis: { type: 'time' },
-      yAxis: { type: 'value', inverse: true, min: 0, max: Math.ceil(maxRank / 5) * 5, interval: 5, axisLabel: { color: css('--muted'), formatter: (v) => (v ? v : '') } },
-      series: [{ type: 'scatter', symbolSize: 7, color: css('--accent'), data: a.h.map(([d, rk]) => [INDEX.dates[d], rk]) }],
-    });
-  }
-  if (r.sh && r.sh.length > 1) {
-    mkChart('c-stars', {
-      grid: { left: 56, right: 16, top: 12, bottom: 28 },
-      tooltip: { trigger: 'axis', valueFormatter: (v) => num(v) },
-      xAxis: { type: 'time' },
-      yAxis: { type: 'value', scale: true, axisLabel: { formatter: (v) => short(v), color: css('--muted') } },
-      series: [{ type: 'line', symbol: 'circle', symbolSize: 5, color: css('--hot'), data: r.sh.map(([d, s]) => [INDEX.dates[d], s]) }],
+      yAxis: { type: 'value', inverse: true, min: 0, max: Math.ceil(maxRank / 5) * 5, interval: 5,
+        axisLabel: { color: css('--muted'), formatter: (v) => v || '' } },
+      series: [{ type: 'scatter', symbolSize: 7, color: css('--muted'), data: a.h.map(([date, rank]) => [INDEX.dates[date], rank]) }],
     });
   }
 }
@@ -358,7 +431,7 @@ async function viewSearch(q) {
   const repos = await getJSON('repos.json');
   const hits = [];
   for (const [name, r] of Object.entries(repos)) {
-    const hay = `${name} ${r.d || ''} ${r.zh || ''} ${(r.t || []).join(' ')} ${(r.tags || []).join(' ')}`.toLowerCase();
+    const hay = `${name} ${r.d || ''} ${r.zh || ''} ${r.intro?.what || ''} ${(r.intro?.use_cases || []).join(' ')} ${(r.t || []).join(' ')} ${(r.tags || []).join(' ')}`.toLowerCase();
     if (terms.every((t) => hay.includes(t))) hits.push([name, r]);
   }
   hits.sort((x, y) => (y[1].a?.n || 0) - (x[1].a?.n || 0) || (y[1].s || 0) - (x[1].s || 0));
@@ -379,7 +452,8 @@ function viewAbout() {
     <h2>数据怎么来的</h2>
     <ul>
       <li>每天 UTC 00:17（北京时间 08:17）由 GitHub Actions 抓取：总榜（今日 / 本周 / 本月）、中文项目榜，以及 Python、Jupyter、TypeScript、JavaScript、Go、Rust、Java、C++ 语言榜。</li>
-      <li>用 GitHub API 补充话题、创建时间、许可证等信息；用大模型生成一句话中文简介和分类（配置了模型密钥时）。</li>
+      <li>用 GitHub API 补充话题、创建时间、许可证等信息；项目中文介绍根据公开简介与 README 整理，说明做什么、具体用途及适用人群，详情页提供资料来源。</li>
+      <li>每天独立记录所有已收录且可访问仓库的总 Stars，项目离榜后仍继续跟踪。点项目名或“Stars 趋势”即可查看曲线。</li>
       <li>日期按抓取时的 UTC 日期记；GitHub 的“今日”榜是过去 24 小时的滚动窗口。</li>
     </ul>
     <h2>历史数据</h2>

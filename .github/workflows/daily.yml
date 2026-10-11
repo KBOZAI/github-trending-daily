@@ -12,7 +12,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ["site/**", "scripts/**", "config.json", "requirements.txt", ".github/workflows/daily.yml"]
+    paths: ["site/**", "scripts/**", "tests/**", "data/repos/summaries.json", "config.json", "requirements.txt", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write
@@ -38,6 +38,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Verify data pipeline
+        run: python -m unittest discover -s tests
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
@@ -54,17 +56,26 @@ jobs:
         run: python scripts/enrich.py
 
       - name: Chinese summaries (skipped without LLM_API_KEY)
-        if: steps.scrape.outputs.changed == 'true'
+        id: summaries
+        if: github.event_name != 'push'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
-        run: python scripts/summarize.py
+        run: python scripts/summarize.py --limit 180 --backfill 24
+
+      - name: Track daily Stars for all known repos
+        id: stars
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/track_stars.py ${{ inputs.force && '--force' || '' }}
 
       - name: Commit data
-        if: steps.scrape.outputs.changed == 'true'
+        if: steps.scrape.outputs.changed == 'true' || steps.stars.outputs.changed == 'true' || steps.summaries.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1,4 +1,5 @@
 site/data/
+data/repos/readmes.json
 __pycache__/
 *.tmp
 .DS_Store
