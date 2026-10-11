@@ -134,8 +134,11 @@ def publish():
     # Only the data authored by this task may be committed automatically.
     changed = command(["git", "diff", "--name-only", "HEAD"], capture=True).splitlines()
     new = command(["git", "ls-files", "--others", "--exclude-standard"], capture=True).splitlines()
-    if any(not path.startswith("data/") for path in changed + new):
-        raise RuntimeError("Changes outside data/ need review; do not include unrelated work")
+    def owned_data(path):
+        return path.startswith(("data/snapshots/", "data/stars/")) or path in (
+            "data/repos/meta.json", "data/repos/summaries.json")
+    if any(not owned_data(path) for path in changed + new):
+        raise RuntimeError("Changes outside generated daily data need review; preserve unrelated work")
     command([sys.executable, "-m", "unittest", "discover", "-s", "tests"])
     run_script("build.py")
     check_site(ROOT / "site")
