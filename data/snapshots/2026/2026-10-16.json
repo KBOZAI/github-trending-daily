@@ -1,0 +1,1930 @@
+{
+ "date": "2026-10-16",
+ "captured_at": "2026-10-16T12:59:36Z",
+ "lists": {
+  "all:daily": [
+   {
+    "rank": 1,
+    "repo": "anthropics/claude-plugins-official",
+    "id": 1100776768,
+    "desc": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "lang": "Python",
+    "stars": 39876,
+    "forks": 4361,
+    "gained": 1552
+   },
+   {
+    "rank": 2,
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "id": 1079456184,
+    "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "lang": "Python",
+    "stars": 51105,
+    "forks": 4531,
+    "gained": 1158
+   },
+   {
+    "rank": 3,
+    "repo": "affaan-m/ECC",
+    "id": 1136590548,
+    "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "lang": "JavaScript",
+    "stars": 280928,
+    "forks": 41776,
+    "gained": 1057
+   },
+   {
+    "rank": 4,
+    "repo": "HKUDS/CLI-Anything",
+    "id": 1176011916,
+    "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+    "lang": "Python",
+    "stars": 53227,
+    "forks": 4828,
+    "gained": 716
+   },
+   {
+    "rank": 5,
+    "repo": "mksglu/context-mode",
+    "id": 1164477708,
+    "desc": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+    "lang": "TypeScript",
+    "stars": 30018,
+    "forks": 2112,
+    "gained": 449
+   },
+   {
+    "rank": 6,
+    "repo": "ruvnet/ruflo",
+    "id": 995029641,
+    "desc": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "lang": "TypeScript",
+    "stars": 75430,
+    "forks": 8949,
+    "gained": 672
+   },
+   {
+    "rank": 7,
+    "repo": "android/skills",
+    "id": 1183263320,
+    "desc": "",
+    "lang": "Kotlin",
+    "stars": 7887,
+    "forks": 523,
+    "gained": 35
+   },
+   {
+    "rank": 8,
+    "repo": "obra/superpowers",
+    "id": 1073224795,
+    "desc": "An agentic skills framework & software development methodology that works.",
+    "lang": "Shell",
+    "stars": 300394,
+    "forks": 26819,
+    "gained": 973
+   },
+   {
+    "rank": 9,
+    "repo": "cursor/plugins",
+    "id": 1140229822,
+    "desc": "Cursor plugin specification and official plugins",
+    "lang": "TypeScript",
+    "stars": 11783,
+    "forks": 1143,
+    "gained": 214
+   },
+   {
+    "rank": 10,
+    "repo": "debpalash/VoiceStudio",
+    "id": 1206390571,
+    "desc": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "lang": "Python",
+    "stars": 70157,
+    "forks": 7688,
+    "gained": 2301
+   },
+   {
+    "rank": 11,
+    "repo": "MadsLorentzen/ai-job-search",
+    "id": 1185389803,
+    "desc": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+    "lang": "Python",
+    "stars": 47841,
+    "forks": 16500,
+    "gained": 879
+   },
+   {
+    "rank": 12,
+    "repo": "hmjz100/LinkSwift",
+    "id": 523325759,
+    "desc": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+    "lang": "JavaScript",
+    "stars": 23283,
+    "forks": 1409,
+    "gained": 592
+   },
+   {
+    "rank": 13,
+    "repo": "xerj-org/xerj",
+    "id": 1284653133,
+    "desc": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+    "lang": "Rust",
+    "stars": 6438,
+    "forks": 326,
+    "gained": 1647
+   }
+  ],
+  "all:weekly": [
+   {
+    "rank": 1,
+    "repo": "morluto/rea",
+    "id": 1209966933,
+    "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+    "lang": "TypeScript",
+    "stars": 283484,
+    "forks": 71421,
+    "gained": 239477
+   },
+   {
+    "rank": 2,
+    "repo": "storytold/artcraft",
+    "id": 476507964,
+    "desc": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+    "lang": "Rust",
+    "stars": 29968,
+    "forks": 4760,
+    "gained": 22319
+   },
+   {
+    "rank": 3,
+    "repo": "boykopovar/AnyPS5",
+    "id": 1322250666,
+    "desc": "Tool for automatic PS5 executables porting to Linux and Windows",
+    "lang": "C++",
+    "stars": 39355,
+    "forks": 3518,
+    "gained": 25174
+   },
+   {
+    "rank": 4,
+    "repo": "cathrynlavery/diagram-design",
+    "id": 1212769188,
+    "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+    "lang": "HTML",
+    "stars": 56210,
+    "forks": 3561,
+    "gained": 10237
+   },
+   {
+    "rank": 5,
+    "repo": "heygen-com/hyperframes",
+    "id": 1177402105,
+    "desc": "Write HTML. Render video. Built for agents.",
+    "lang": "TypeScript",
+    "stars": 64993,
+    "forks": 5853,
+    "gained": 5318
+   },
+   {
+    "rank": 6,
+    "repo": "mattpocock/skills",
+    "id": 1148788086,
+    "desc": "Skills for Real Engineers. Straight from my .agents directory.",
+    "lang": "Shell",
+    "stars": 293586,
+    "forks": 24616,
+    "gained": 12147
+   },
+   {
+    "rank": 7,
+    "repo": "NationalSecurityAgency/ghidra",
+    "id": 173228436,
+    "desc": "Ghidra is a software reverse engineering (SRE) framework",
+    "lang": "Java",
+    "stars": 89305,
+    "forks": 9976,
+    "gained": 6614
+   },
+   {
+    "rank": 8,
+    "repo": "mksglu/context-mode",
+    "id": 1164477708,
+    "desc": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+    "lang": "TypeScript",
+    "stars": 30018,
+    "forks": 2112,
+    "gained": 4038
+   },
+   {
+    "rank": 9,
+    "repo": "ranxianglei/billion-context",
+    "id": 1324949198,
+    "desc": "A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
+    "lang": "TypeScript",
+    "stars": 1473,
+    "forks": 116,
+    "gained": 659
+   },
+   {
+    "rank": 10,
+    "repo": "anthropics/claude-plugins-official",
+    "id": 1100776768,
+    "desc": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "lang": "Python",
+    "stars": 39876,
+    "forks": 4361,
+    "gained": 2217
+   },
+   {
+    "rank": 11,
+    "repo": "earthtojake/text-to-cad",
+    "id": 1217522067,
+    "desc": "Give your agent CAD superpowers.",
+    "lang": "Python",
+    "stars": 20875,
+    "forks": 2061,
+    "gained": 2244
+   }
+  ],
+  "all:monthly": [
+   {
+    "rank": 1,
+    "repo": "cloudflare/security-audit-skill",
+    "id": 1273427276,
+    "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+    "lang": "JavaScript",
+    "stars": 30044,
+    "forks": 1866,
+    "gained": 25242
+   },
+   {
+    "rank": 2,
+    "repo": "paperclipai/paperclip",
+    "id": 1170821064,
+    "desc": "The open-source app everyone uses to manage agents at work",
+    "lang": "TypeScript",
+    "stars": 102993,
+    "forks": 17232,
+    "gained": 22181
+   },
+   {
+    "rank": 3,
+    "repo": "anthropics/financial-services",
+    "id": 1165056385,
+    "desc": "",
+    "lang": "Python",
+    "stars": 40051,
+    "forks": 5626,
+    "gained": 5252
+   },
+   {
+    "rank": 4,
+    "repo": "heygen-com/hyperframes",
+    "id": 1177402105,
+    "desc": "Write HTML. Render video. Built for agents.",
+    "lang": "TypeScript",
+    "stars": 64993,
+    "forks": 5853,
+    "gained": 14246
+   },
+   {
+    "rank": 5,
+    "repo": "vectorize-io/hindsight",
+    "id": 1086419061,
+    "desc": "Hindsight: Agent Memory That Learns",
+    "lang": "Python",
+    "stars": 50316,
+    "forks": 6096,
+    "gained": 26652
+   },
+   {
+    "rank": 6,
+    "repo": "debpalash/VoiceStudio",
+    "id": 1206390571,
+    "desc": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "lang": "Python",
+    "stars": 70157,
+    "forks": 7688,
+    "gained": 38181
+   },
+   {
+    "rank": 7,
+    "repo": "affaan-m/ECC",
+    "id": 1136590548,
+    "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "lang": "JavaScript",
+    "stars": 280929,
+    "forks": 41776,
+    "gained": 22953
+   },
+   {
+    "rank": 8,
+    "repo": "agent-substrate/substrate",
+    "id": 1238047523,
+    "desc": "Agent Substrate: the core system",
+    "lang": "Go",
+    "stars": 5272,
+    "forks": 583,
+    "gained": 3368
+   },
+   {
+    "rank": 9,
+    "repo": "anthropics/knowledge-work-plugins",
+    "id": 1140828898,
+    "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+    "lang": "Python",
+    "stars": 29848,
+    "forks": 3374,
+    "gained": 5835
+   },
+   {
+    "rank": 10,
+    "repo": "mksglu/context-mode",
+    "id": 1164477708,
+    "desc": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+    "lang": "TypeScript",
+    "stars": 30018,
+    "forks": 2112,
+    "gained": 6744
+   },
+   {
+    "rank": 11,
+    "repo": "NVIDIA/OpenShell",
+    "id": 1166129534,
+    "desc": "OpenShell is the safe, private runtime for autonomous AI agents.",
+    "lang": "Rust",
+    "stars": 16399,
+    "forks": 1799,
+    "gained": 7813
+   },
+   {
+    "rank": 12,
+    "repo": "tashfeenahmed/freellmapi",
+    "id": 1217040185,
+    "desc": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+    "lang": "TypeScript",
+    "stars": 36009,
+    "forks": 4853,
+    "gained": 9499
+   },
+   {
+    "rank": 13,
+    "repo": "TencentCloud/Octop",
+    "id": 1293600453,
+    "desc": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+    "lang": "Python",
+    "stars": 9657,
+    "forks": 1214,
+    "gained": 7082
+   },
+   {
+    "rank": 14,
+    "repo": "trycua/cua",
+    "id": 925270205,
+    "desc": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+    "lang": "Rust",
+    "stars": 29931,
+    "forks": 2142,
+    "gained": 7322
+   },
+   {
+    "rank": 15,
+    "repo": "NationalSecurityAgency/ghidra",
+    "id": 173228436,
+    "desc": "Ghidra is a software reverse engineering (SRE) framework",
+    "lang": "Java",
+    "stars": 89305,
+    "forks": 9976,
+    "gained": 12092
+   },
+   {
+    "rank": 16,
+    "repo": "addyosmani/agent-skills",
+    "id": 1158722119,
+    "desc": "Production-grade engineering skills for AI coding agents.",
+    "lang": "JavaScript",
+    "stars": 107240,
+    "forks": 11156,
+    "gained": 13095
+   },
+   {
+    "rank": 17,
+    "repo": "anthropics/claude-code",
+    "id": 937253475,
+    "desc": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "lang": "TypeScript",
+    "stars": 151178,
+    "forks": 26797,
+    "gained": 6760
+   },
+   {
+    "rank": 18,
+    "repo": "Tencent/WeKnora",
+    "id": 1024118326,
+    "desc": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+    "lang": "Go",
+    "stars": 34355,
+    "forks": 4581,
+    "gained": 10698
+   },
+   {
+    "rank": 19,
+    "repo": "rohitg00/ai-engineering-from-scratch",
+    "id": 1185590488,
+    "desc": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
+    "lang": "Python",
+    "stars": 70053,
+    "forks": 12312,
+    "gained": 15242
+   },
+   {
+    "rank": 20,
+    "repo": "cursor/plugins",
+    "id": 1140229822,
+    "desc": "Cursor plugin specification and official plugins",
+    "lang": "TypeScript",
+    "stars": 11783,
+    "forks": 1143,
+    "gained": 3928
+   },
+   {
+    "rank": 21,
+    "repo": "longbridge/gpui-kit",
+    "id": 814684486,
+    "desc": "Rust GUI components for building fantastic cross-platform desktop application by using GPUI.",
+    "lang": "Rust",
+    "stars": 17726,
+    "forks": 1078,
+    "gained": 3233
+   },
+   {
+    "rank": 22,
+    "repo": "VectifyAI/PageIndex",
+    "id": 958531089,
+    "desc": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+    "lang": "Python",
+    "stars": 39161,
+    "forks": 3400,
+    "gained": 3625
+   }
+  ],
+  "zh:daily": [
+   {
+    "rank": 1,
+    "repo": "OI-wiki/OI-wiki",
+    "id": 140516736,
+    "desc": "🌟 Wiki of OI / ICPC for everyone. （某大型游戏线上攻略，内含炫酷算术魔法）",
+    "lang": "TypeScript",
+    "stars": 26880,
+    "forks": 4696,
+    "gained": 9
+   },
+   {
+    "rank": 2,
+    "repo": "soybeanjs/soybean-admin",
+    "id": 404414397,
+    "desc": "A clean, elegant, beautiful and powerful admin template, based on Vue3, Vite7, TypeScript, Pinia, NaiveUI and UnoCSS. 一个清新优雅、高颜值且功能强大的后台管理模板，基于最新的前端技术栈，包括 Vue3, Vite8, TypeScript, Pinia, NaiveUI 和 UnoCSS。",
+    "lang": "TypeScript",
+    "stars": 15111,
+    "forks": 2517,
+    "gained": 18
+   },
+   {
+    "rank": 3,
+    "repo": "ccfos/nightingale",
+    "id": 244694886,
+    "desc": "Open-source, self-hosted alerting for metrics, logs, and databases. Includes a built-in AI agent and MCP server.",
+    "lang": "Go",
+    "stars": 13364,
+    "forks": 1786,
+    "gained": 14
+   },
+   {
+    "rank": 4,
+    "repo": "d2l-ai/d2l-zh",
+    "id": 101138315,
+    "desc": "《动手学深度学习》：面向中文读者、能运行、可讨论。中英文版被70多个国家的500多所大学用于教学。",
+    "lang": "Python",
+    "stars": 81793,
+    "forks": 12427,
+    "gained": 67
+   },
+   {
+    "rank": 5,
+    "repo": "shadow1ng/fscan",
+    "id": 312629343,
+    "desc": "一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。(An intranet comprehensive scanning tool, enabling one-click automated, all-round vulnerability scanning)",
+    "lang": "Go",
+    "stars": 14685,
+    "forks": 1953,
+    "gained": 13
+   },
+   {
+    "rank": 6,
+    "repo": "YunaiV/ruoyi-vue-pro",
+    "id": 332357698,
+    "desc": "🔥 官方推荐 🔥 RuoYi-Vue 全新 Pro 版本，优化重构所有功能。基于 Spring Boot + MyBatis Plus + Vue & Element 实现的后台管理系统 + 微信小程序，支持 RBAC 动态权限、数据权限、SaaS 多租户、Flowable 工作流、三方登录、支付、短信、商城、CRM、ERP、MES、IM、AI 大模型、IoT 物联网等功能。你的 ⭐️ Star ⭐️，是作者生发的动力！",
+    "lang": "Java",
+    "stars": 39845,
+    "forks": 8586,
+    "gained": 41
+   },
+   {
+    "rank": 7,
+    "repo": "AstrBotDevs/AstrBot",
+    "id": 575865240,
+    "desc": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "lang": "Python",
+    "stars": 41994,
+    "forks": 3072,
+    "gained": 66
+   },
+   {
+    "rank": 8,
+    "repo": "maotoumao/MusicFree",
+    "id": 527600676,
+    "desc": "插件化、定制化、无广告的免费音乐播放器",
+    "lang": "TypeScript",
+    "stars": 27580,
+    "forks": 1981,
+    "gained": 35
+   },
+   {
+    "rank": 9,
+    "repo": "higress-group/higress",
+    "id": 558188628,
+    "desc": "🤖 AI Gateway | AI Native API Gateway",
+    "lang": "Go",
+    "stars": 9572,
+    "forks": 1351,
+    "gained": 6
+   },
+   {
+    "rank": 10,
+    "repo": "zizifn/edgetunnel",
+    "id": 320850140,
+    "desc": "Running V2ray inside edge/serverless runtime",
+    "lang": "JavaScript",
+    "stars": 9251,
+    "forks": 51471,
+    "gained": 6
+   },
+   {
+    "rank": 11,
+    "repo": "RapidAI/RapidOCR",
+    "id": 326610757,
+    "desc": "📄 Awesome OCR multiple programing languages toolkits based on ONNX Runtime, OpenVINO, MNN, PaddlePaddle, TensorRT and PyTorch.",
+    "lang": "Python",
+    "stars": 8157,
+    "forks": 745,
+    "gained": 13
+   },
+   {
+    "rank": 12,
+    "repo": "Evil0ctal/Douyin_TikTok_Download_API",
+    "id": 425387994,
+    "desc": "🚀 抖音、TikTok 数据采集与无水印视频下载 API，自托管，支持 MCP 调用与 Docker 一键部署。| Self-hosted TikTok & Douyin scraper and no-watermark video downloader — async REST API, MCP server, CLI and web console for posts, profiles, comments and playlists. Self-healing identity pool, PostgreSQL archive, one docker compose up.",
+    "lang": "Python",
+    "stars": 20684,
+    "forks": 2926,
+    "gained": 22
+   },
+   {
+    "rank": 13,
+    "repo": "timqian/chinese-independent-blogs",
+    "id": 216773481,
+    "desc": "中文独立博客列表",
+    "lang": "JavaScript",
+    "stars": 24169,
+    "forks": 2744,
+    "gained": 25
+   },
+   {
+    "rank": 14,
+    "repo": "yangzongzhuan/RuoYi-Vue3",
+    "id": 433037416,
+    "desc": "🎉 (RuoYi)官方仓库 基于SpringBoot，Spring Security，JWT，Vue3 & Vite、Element Plus 的前后端分离权限管理系统",
+    "lang": "Vue",
+    "stars": 6785,
+    "forks": 2508,
+    "gained": 2
+   },
+   {
+    "rank": 15,
+    "repo": "langbot-app/LangBot",
+    "id": 575321313,
+    "desc": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Moonshot, openclaw / hermes agent, deerflow",
+    "lang": "Python",
+    "stars": 18211,
+    "forks": 1671,
+    "gained": 27
+   },
+   {
+    "rank": 16,
+    "repo": "zhayujie/CowAgent",
+    "id": 522158088,
+    "desc": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+    "lang": "Python",
+    "stars": 47429,
+    "forks": 10396,
+    "gained": 19
+   },
+   {
+    "rank": 17,
+    "repo": "oceanbase/miniob",
+    "id": 416144775,
+    "desc": "MiniOB is a compact database that assists developers in understanding the fundamental workings of a database.",
+    "lang": "C++",
+    "stars": 4430,
+    "forks": 1623,
+    "gained": 0
+   },
+   {
+    "rank": 18,
+    "repo": "itwanger/toBeBetterJavaer",
+    "id": 156627365,
+    "desc": "一份通俗易懂、风趣幽默的Java学习指南，内容涵盖Java基础、Java并发编程、Java虚拟机、Java企业级开发、Java面试等核心知识点。学Java，就认准二哥的Java进阶之路😄",
+    "lang": "Java",
+    "stars": 17758,
+    "forks": 2480,
+    "gained": 8
+   },
+   {
+    "rank": 19,
+    "repo": "forthespada/CS-Books",
+    "id": 328349603,
+    "desc": "🔥🔥超过1000本的计算机经典书籍、个人笔记资料以及本人在各平台发表文章中所涉及的资源等。书籍资源包括C/C++、Java、Python、Go语言、数据结构与算法、操作系统、后端架构、计算机系统知识、数据库、计算机网络、设计模式、前端、汇编以及校招社招各种面经~",
+    "lang": null,
+    "stars": 27479,
+    "forks": 4122,
+    "gained": 14
+   },
+   {
+    "rank": 20,
+    "repo": "Johnshall/Shadowrocket-ADBlock-Rules-Forever",
+    "id": 435427730,
+    "desc": "提供多款 Shadowrocket 规则，拥有强劲的广告过滤功能。每日 8 时重新构建规则。",
+    "lang": null,
+    "stars": 31242,
+    "forks": 2078,
+    "gained": 42
+   },
+   {
+    "rank": 21,
+    "repo": "krahets/hello-algo",
+    "id": 561730219,
+    "desc": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
+    "lang": "Java",
+    "stars": 130781,
+    "forks": 15512,
+    "gained": 53
+   }
+  ],
+  "python:daily": [
+   {
+    "rank": 1,
+    "repo": "anthropics/claude-plugins-official",
+    "id": 1100776768,
+    "desc": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "lang": "Python",
+    "stars": 39876,
+    "forks": 4361,
+    "gained": 1552
+   },
+   {
+    "rank": 2,
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "id": 1079456184,
+    "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "lang": "Python",
+    "stars": 51105,
+    "forks": 4531,
+    "gained": 1158
+   },
+   {
+    "rank": 3,
+    "repo": "HKUDS/CLI-Anything",
+    "id": 1176011916,
+    "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+    "lang": "Python",
+    "stars": 53227,
+    "forks": 4828,
+    "gained": 716
+   },
+   {
+    "rank": 4,
+    "repo": "debpalash/VoiceStudio",
+    "id": 1206390571,
+    "desc": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+    "lang": "Python",
+    "stars": 70157,
+    "forks": 7688,
+    "gained": 2301
+   },
+   {
+    "rank": 5,
+    "repo": "MadsLorentzen/ai-job-search",
+    "id": 1185389803,
+    "desc": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+    "lang": "Python",
+    "stars": 47841,
+    "forks": 16500,
+    "gained": 879
+   },
+   {
+    "rank": 6,
+    "repo": "lightseekorg/tokenspeed",
+    "id": 1230933500,
+    "desc": "TokenSpeed is a speed-of-light LLM inference engine.",
+    "lang": "Python",
+    "stars": 2644,
+    "forks": 349,
+    "gained": 374
+   },
+   {
+    "rank": 7,
+    "repo": "elder-plinius/V3R1T4S",
+    "id": 1011751194,
+    "desc": "liberating known unknowns",
+    "lang": "Python",
+    "stars": 342,
+    "forks": 61,
+    "gained": 43
+   },
+   {
+    "rank": 8,
+    "repo": "Crosstalk-Solutions/unifi-toolkit",
+    "id": 1107824454,
+    "desc": "A suite of tools for UniFi network management",
+    "lang": "Python",
+    "stars": 678,
+    "forks": 69,
+    "gained": 44
+   },
+   {
+    "rank": 9,
+    "repo": "harry0703/MoneyPrinterTurbo",
+    "id": 770153867,
+    "desc": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+    "lang": "Python",
+    "stars": 131972,
+    "forks": 20782,
+    "gained": 604
+   },
+   {
+    "rank": 10,
+    "repo": "ifixai-ai/iFixAi",
+    "id": 1222527844,
+    "desc": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+    "lang": "Python",
+    "stars": 28548,
+    "forks": 1552,
+    "gained": 1587
+   },
+   {
+    "rank": 11,
+    "repo": "rohitg00/ai-engineering-from-scratch",
+    "id": 1185590488,
+    "desc": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
+    "lang": "Python",
+    "stars": 70053,
+    "forks": 12312,
+    "gained": 613
+   },
+   {
+    "rank": 12,
+    "repo": "Imbad0202/academic-research-skills",
+    "id": 1167300963,
+    "desc": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+    "lang": "Python",
+    "stars": 52369,
+    "forks": 4009,
+    "gained": 254
+   },
+   {
+    "rank": 13,
+    "repo": "odoo/odoo",
+    "id": 19745004,
+    "desc": "Odoo. Open Source Apps To Grow Your Business.",
+    "lang": "Python",
+    "stars": 55085,
+    "forks": 34035,
+    "gained": 30
+   },
+   {
+    "rank": 14,
+    "repo": "google/artemis",
+    "id": 1333399642,
+    "desc": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code. It also achieves 99%+ success rate on AndroidWorld Benchmark.",
+    "lang": "Python",
+    "stars": 11981,
+    "forks": 1281,
+    "gained": 221
+   },
+   {
+    "rank": 15,
+    "repo": "earthtojake/text-to-cad",
+    "id": 1217522067,
+    "desc": "Give your agent CAD superpowers.",
+    "lang": "Python",
+    "stars": 20875,
+    "forks": 2061,
+    "gained": 307
+   }
+  ],
+  "jupyter:daily": [
+   {
+    "rank": 1,
+    "repo": "jackfrued/Python-100-Days",
+    "id": 123458551,
+    "desc": "Python - 100天从新手到大师",
+    "lang": "Jupyter Notebook",
+    "stars": 187217,
+    "forks": 55764,
+    "gained": 71
+   },
+   {
+    "rank": 2,
+    "repo": "GokuMohandas/Made-With-ML",
+    "id": 156157055,
+    "desc": "Learn how to develop, deploy and iterate on production-grade ML applications.",
+    "lang": "Jupyter Notebook",
+    "stars": 49748,
+    "forks": 7805,
+    "gained": 14
+   },
+   {
+    "rank": 3,
+    "repo": "AI4Finance-Foundation/FinRL",
+    "id": 282653872,
+    "desc": "FinRL®: Financial Reinforcement Learning. 🔥",
+    "lang": "Jupyter Notebook",
+    "stars": 16692,
+    "forks": 3558,
+    "gained": 46
+   },
+   {
+    "rank": 4,
+    "repo": "mrdbourke/pytorch-deep-learning",
+    "id": 418718534,
+    "desc": "Materials for the Learn PyTorch for Deep Learning: Zero to Mastery course.",
+    "lang": "Jupyter Notebook",
+    "stars": 19217,
+    "forks": 5218,
+    "gained": 13
+   },
+   {
+    "rank": 5,
+    "repo": "NVIDIA-NeMo/Nemotron",
+    "id": 1069235905,
+    "desc": "Developer Asset Hub for NVIDIA Nemotron — A one-stop resource for training recipes, usage cookbooks, datasets, and full end-to-end reference examples to build with Nemotron models",
+    "lang": "Jupyter Notebook",
+    "stars": 2167,
+    "forks": 442,
+    "gained": 7
+   },
+   {
+    "rank": 6,
+    "repo": "facebookresearch/segment-anything",
+    "id": 618058471,
+    "desc": "The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+    "lang": "Jupyter Notebook",
+    "stars": 55027,
+    "forks": 6389,
+    "gained": 22
+   },
+   {
+    "rank": 7,
+    "repo": "alirezadir/AIMLInterviews",
+    "id": 334567245,
+    "desc": "A Comprehensive Guide for Generative AI, Agentic AI, Multimodal AI, Physical AI Interviews. Proven Formula for multiple FAANG offers and more",
+    "lang": "Jupyter Notebook",
+    "stars": 9869,
+    "forks": 1726,
+    "gained": 23
+   },
+   {
+    "rank": 8,
+    "repo": "ed-donner/llm_engineering",
+    "id": 850490697,
+    "desc": "Repo to accompany my mastering LLM engineering course",
+    "lang": "Jupyter Notebook",
+    "stars": 7684,
+    "forks": 7482,
+    "gained": 7
+   },
+   {
+    "rank": 9,
+    "repo": "anthropics/claude-cookbooks",
+    "id": 678973052,
+    "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+    "lang": "Jupyter Notebook",
+    "stars": 53482,
+    "forks": 6438,
+    "gained": 42
+   },
+   {
+    "rank": 10,
+    "repo": "microsoft/generative-ai-for-beginners",
+    "id": 655806940,
+    "desc": "21 Lessons, Get Started Building with Generative AI",
+    "lang": "Jupyter Notebook",
+    "stars": 121467,
+    "forks": 64019,
+    "gained": 79
+   },
+   {
+    "rank": 11,
+    "repo": "CompVis/stable-diffusion",
+    "id": 523379232,
+    "desc": "A latent text-to-image diffusion model",
+    "lang": "Jupyter Notebook",
+    "stars": 73522,
+    "forks": 10571,
+    "gained": 15
+   },
+   {
+    "rank": 12,
+    "repo": "SakanaAI/AI-Scientist",
+    "id": 841376583,
+    "desc": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery 🧑‍🔬",
+    "lang": "Jupyter Notebook",
+    "stars": 14741,
+    "forks": 2066,
+    "gained": 23
+   },
+   {
+    "rank": 13,
+    "repo": "HandsOnLLM/Hands-On-Large-Language-Models",
+    "id": 821372392,
+    "desc": "Official code repo for the O'Reilly Book - \"Hands-On Large Language Models\"",
+    "lang": "Jupyter Notebook",
+    "stars": 29605,
+    "forks": 6768,
+    "gained": 14
+   },
+   {
+    "rank": 14,
+    "repo": "google-gemini/cookbook",
+    "id": 771670025,
+    "desc": "Examples and guides for using the Gemini API",
+    "lang": "Jupyter Notebook",
+    "stars": 17844,
+    "forks": 2810,
+    "gained": 10
+   },
+   {
+    "rank": 15,
+    "repo": "NVIDIA/cosmos",
+    "id": 910176789,
+    "desc": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
+    "lang": "Jupyter Notebook",
+    "stars": 12052,
+    "forks": 914,
+    "gained": 9
+   },
+   {
+    "rank": 16,
+    "repo": "microsoft/AI-For-Beginners",
+    "id": 344190478,
+    "desc": "12 Weeks, 24 Lessons, AI for All!",
+    "lang": "Jupyter Notebook",
+    "stars": 69855,
+    "forks": 13548,
+    "gained": 54
+   },
+   {
+    "rank": 17,
+    "repo": "DataTalksClub/data-engineering-zoomcamp",
+    "id": 419661684,
+    "desc": "Data Engineering Zoomcamp is a free 9-week course on building production-ready data pipelines. Join the course here 👇🏼",
+    "lang": "Jupyter Notebook",
+    "stars": 46225,
+    "forks": 8976,
+    "gained": 17
+   },
+   {
+    "rank": 18,
+    "repo": "microsoft/ai-agents-for-beginners",
+    "id": 895508656,
+    "desc": "18 Lessons to Get Started Building AI Agents",
+    "lang": "Jupyter Notebook",
+    "stars": 77273,
+    "forks": 25368,
+    "gained": 84
+   },
+   {
+    "rank": 19,
+    "repo": "ageron/handson-ml3",
+    "id": 461147335,
+    "desc": "A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python using Scikit-Learn, Keras and TensorFlow 2.",
+    "lang": "Jupyter Notebook",
+    "stars": 14322,
+    "forks": 5360,
+    "gained": 13
+   },
+   {
+    "rank": 20,
+    "repo": "patchy631/ai-engineering-hub",
+    "id": 876064934,
+    "desc": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+    "lang": "Jupyter Notebook",
+    "stars": 38337,
+    "forks": 6309,
+    "gained": 13
+   }
+  ],
+  "typescript:daily": [
+   {
+    "rank": 1,
+    "repo": "mksglu/context-mode",
+    "id": 1164477708,
+    "desc": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+    "lang": "TypeScript",
+    "stars": 30018,
+    "forks": 2112,
+    "gained": 449
+   },
+   {
+    "rank": 2,
+    "repo": "ruvnet/ruflo",
+    "id": 995029641,
+    "desc": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+    "lang": "TypeScript",
+    "stars": 75430,
+    "forks": 8949,
+    "gained": 672
+   },
+   {
+    "rank": 3,
+    "repo": "cursor/plugins",
+    "id": 1140229822,
+    "desc": "Cursor plugin specification and official plugins",
+    "lang": "TypeScript",
+    "stars": 11784,
+    "forks": 1143,
+    "gained": 214
+   },
+   {
+    "rank": 4,
+    "repo": "stablyai/orca",
+    "id": 1183888342,
+    "desc": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+    "lang": "TypeScript",
+    "stars": 94078,
+    "forks": 6009,
+    "gained": 949
+   },
+   {
+    "rank": 5,
+    "repo": "OpenCut-app/OpenCut",
+    "id": 1006414368,
+    "desc": "The open-source CapCut alternative",
+    "lang": "TypeScript",
+    "stars": 94876,
+    "forks": 9335,
+    "gained": 345
+   },
+   {
+    "rank": 6,
+    "repo": "LibreSpark/LibreTV",
+    "id": 961357433,
+    "desc": "一分钟搭建影视站，支持Docker等部署方式",
+    "lang": "TypeScript",
+    "stars": 18660,
+    "forks": 28887,
+    "gained": 978
+   },
+   {
+    "rank": 7,
+    "repo": "anomalyco/opencode",
+    "id": 975734319,
+    "desc": "The open source coding agent.",
+    "lang": "TypeScript",
+    "stars": 214181,
+    "forks": 28745,
+    "gained": 401
+   },
+   {
+    "rank": 8,
+    "repo": "heygen-com/hyperframes",
+    "id": 1177402105,
+    "desc": "Write HTML. Render video. Built for agents.",
+    "lang": "TypeScript",
+    "stars": 64993,
+    "forks": 5853,
+    "gained": 858
+   },
+   {
+    "rank": 9,
+    "repo": "desktop/desktop",
+    "id": 58559694,
+    "desc": "Focus on what matters instead of fighting with Git.",
+    "lang": "TypeScript",
+    "stars": 21956,
+    "forks": 10630,
+    "gained": 6
+   },
+   {
+    "rank": 10,
+    "repo": "krillinai/OpenCreator",
+    "id": 904490600,
+    "desc": "Formerly KrillinAI, VideoTranslation and Dubbing Tool. Open-source AI workspace for creators, powered by Codex. Video downloading, video translation, create videos, images, voice, avatars, and edits with Agents in one place. Suitable for your Social Media like YouTube, TikTok, Instagram, etc.",
+    "lang": "TypeScript",
+    "stars": 13393,
+    "forks": 1462,
+    "gained": 226
+   },
+   {
+    "rank": 11,
+    "repo": "google-labs-code/stitch-skills",
+    "id": 1135847870,
+    "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+    "lang": "TypeScript",
+    "stars": 8522,
+    "forks": 1114,
+    "gained": 11
+   },
+   {
+    "rank": 12,
+    "repo": "morluto/rea",
+    "id": 1209966933,
+    "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+    "lang": "TypeScript",
+    "stars": 283487,
+    "forks": 71424,
+    "gained": 25333
+   },
+   {
+    "rank": 13,
+    "repo": "abcwyc/pi-agent-desktop",
+    "id": 1308404399,
+    "desc": "Pi — A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands. Download and start coding right away.",
+    "lang": "TypeScript",
+    "stars": 786,
+    "forks": 86,
+    "gained": 269
+   },
+   {
+    "rank": 14,
+    "repo": "Fission-AI/OpenSpec",
+    "id": 1032459340,
+    "desc": "Spec-driven development (SDD) for AI coding assistants.",
+    "lang": "TypeScript",
+    "stars": 72127,
+    "forks": 4936,
+    "gained": 113
+   },
+   {
+    "rank": 15,
+    "repo": "apache/maka",
+    "id": 1251460378,
+    "desc": "Apache Maka (Incubating) is a high-performance agent workspace that keeps a complete record of everything it did.",
+    "lang": "TypeScript",
+    "stars": 5808,
+    "forks": 550,
+    "gained": 53
+   },
+   {
+    "rank": 16,
+    "repo": "SegFault42/HeliosGen",
+    "id": 1208490131,
+    "desc": "🏆 Self Hosted Gen AI desktop app. Free alternative to Higgsfield, OpenArt, Freepik....",
+    "lang": "TypeScript",
+    "stars": 3130,
+    "forks": 352,
+    "gained": 331
+   },
+   {
+    "rank": 17,
+    "repo": "BuilderIO/agent-native",
+    "id": 1179959183,
+    "desc": "A framework for building agentic apps",
+    "lang": "TypeScript",
+    "stars": 7381,
+    "forks": 669,
+    "gained": 107
+   },
+   {
+    "rank": 18,
+    "repo": "superdesigndev/superdesign",
+    "id": 1005359642,
+    "desc": "AI Product Design Agent - Open Source",
+    "lang": "TypeScript",
+    "stars": 7422,
+    "forks": 767,
+    "gained": 59
+   }
+  ],
+  "javascript:daily": [
+   {
+    "rank": 1,
+    "repo": "affaan-m/ECC",
+    "id": 1136590548,
+    "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "lang": "JavaScript",
+    "stars": 280930,
+    "forks": 41776,
+    "gained": 1057
+   },
+   {
+    "rank": 2,
+    "repo": "hmjz100/LinkSwift",
+    "id": 523325759,
+    "desc": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+    "lang": "JavaScript",
+    "stars": 23283,
+    "forks": 1409,
+    "gained": 592
+   },
+   {
+    "rank": 3,
+    "repo": "michael-denyer/pstack-claude",
+    "id": 1250276806,
+    "desc": "Claude Code, Codex, Copilot, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+    "lang": "JavaScript",
+    "stars": 2593,
+    "forks": 236,
+    "gained": 501
+   },
+   {
+    "rank": 4,
+    "repo": "superdesigndev/superdesign-skill",
+    "id": 1139329853,
+    "desc": "The design skill for Claude Code, Cursor and any coding agent. Stop shipping AI-slop UI: turn it into shippable, tasteful frontend. Install: npx skills add superdesigndev/superdesign-skill. Powered by superdesign.dev",
+    "lang": "JavaScript",
+    "stars": 795,
+    "forks": 60,
+    "gained": 61
+   },
+   {
+    "rank": 5,
+    "repo": "laoma528/awesome-zhuiju-free",
+    "id": 1260652867,
+    "desc": "免费无广告的追剧资源指南，人工精选资源、每天检测资源有效性。收录在线影视、影视APP、网盘搜索、磁力BT、字幕、TVBox / 影视仓空壳软件/配置地址、IPTV直播源、会员拼团、影视相关开源项目。开源，社区共同维护。",
+    "lang": "JavaScript",
+    "stars": 12363,
+    "forks": 855,
+    "gained": 240
+   },
+   {
+    "rank": 6,
+    "repo": "plugin87/ux-ui-agent-skills",
+    "id": 1183286798,
+    "desc": "Turn Claude into a senior design architect: DTCG tokens, 52 components, WCAG 2.2 AA-AAA, 138 design systems, any-framework code, and 50 objective gates that fail the build instead of faking success.",
+    "lang": "JavaScript",
+    "stars": 1990,
+    "forks": 206,
+    "gained": 180
+   },
+   {
+    "rank": 7,
+    "repo": "github/awesome-copilot",
+    "id": 1000362065,
+    "desc": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+    "lang": "JavaScript",
+    "stars": 40074,
+    "forks": 5137,
+    "gained": 44
+   },
+   {
+    "rank": 8,
+    "repo": "kunchenguid/lavish-axi",
+    "id": 1235863714,
+    "desc": "HTML is the new markdown. Lavish is the new editor for your HTML artifacts.",
+    "lang": "JavaScript",
+    "stars": 4161,
+    "forks": 380,
+    "gained": 28
+   }
+  ],
+  "go:daily": [
+   {
+    "rank": 1,
+    "repo": "JuliusBrussee/caveman",
+    "id": 1201173969,
+    "desc": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+    "lang": "Go",
+    "stars": 112975,
+    "forks": 6536,
+    "gained": 943
+   },
+   {
+    "rank": 2,
+    "repo": "gitleaks/gitleaks",
+    "id": 119190187,
+    "desc": "Find secrets with Gitleaks 🔑",
+    "lang": "Go",
+    "stars": 29999,
+    "forks": 2317,
+    "gained": 54
+   },
+   {
+    "rank": 3,
+    "repo": "tristenlammi/Arrmada",
+    "id": 1152521869,
+    "desc": "arrrrrrrr",
+    "lang": "Go",
+    "stars": 211,
+    "forks": 11,
+    "gained": 27
+   },
+   {
+    "rank": 4,
+    "repo": "vxcontrol/pentagi",
+    "id": 913030762,
+    "desc": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+    "lang": "Go",
+    "stars": 30649,
+    "forks": 4652,
+    "gained": 1388
+   },
+   {
+    "rank": 5,
+    "repo": "Tencent/WeKnora",
+    "id": 1024118326,
+    "desc": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+    "lang": "Go",
+    "stars": 34355,
+    "forks": 4581,
+    "gained": 225
+   },
+   {
+    "rank": 6,
+    "repo": "cilium/cilium",
+    "id": 48109239,
+    "desc": "eBPF-based Networking, Security, and Observability",
+    "lang": "Go",
+    "stars": 25669,
+    "forks": 4161,
+    "gained": 9
+   },
+   {
+    "rank": 7,
+    "repo": "jasonxu114514/opencode2api",
+    "id": 1333630193,
+    "desc": "A Go-based OpenCode Zen / Zen Go API proxy with OpenAI & Anthropic API compatibility, key/proxy pooling, automatic routing, and WebUI.",
+    "lang": "Go",
+    "stars": 853,
+    "forks": 158,
+    "gained": 186
+   },
+   {
+    "rank": 8,
+    "repo": "sipeed/picoclaw",
+    "id": 1149707767,
+    "desc": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
+    "lang": "Go",
+    "stars": 30078,
+    "forks": 4468,
+    "gained": 49
+   },
+   {
+    "rank": 9,
+    "repo": "Gentleman-Programming/engram",
+    "id": 1159234860,
+    "desc": "Persistent memory system for AI coding agents. Agent-agnostic Go binary with SQLite + FTS5, MCP server, HTTP API, CLI, and TUI.",
+    "lang": "Go",
+    "stars": 7315,
+    "forks": 757,
+    "gained": 38
+   },
+   {
+    "rank": 10,
+    "repo": "GoogleCloudPlatform/scion",
+    "id": 1177353643,
+    "desc": "",
+    "lang": "Go",
+    "stars": 1918,
+    "forks": 285,
+    "gained": 49
+   },
+   {
+    "rank": 11,
+    "repo": "keploy/keploy",
+    "id": 449649393,
+    "desc": "Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.",
+    "lang": "Go",
+    "stars": 18591,
+    "forks": 2415,
+    "gained": 16
+   },
+   {
+    "rank": 12,
+    "repo": "llm-d/llm-d-router",
+    "id": 978078885,
+    "desc": "llm-d Router: The intelligent entry point for inference requests",
+    "lang": "Go",
+    "stars": 411,
+    "forks": 457,
+    "gained": 5
+   },
+   {
+    "rank": 13,
+    "repo": "Wei-Shaw/sub2api",
+    "id": 1118601518,
+    "desc": "Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+    "lang": "Go",
+    "stars": 44201,
+    "forks": 9459,
+    "gained": 115
+   },
+   {
+    "rank": 14,
+    "repo": "tbphp/gpt-load",
+    "id": 997490512,
+    "desc": "Self-hosted AI gateway for multi-channel, multi-credential setups — API keys and subscription accounts, scheduling, failover, request logs and usage. 自托管 AI 网关：多渠道多凭据统一接入，含密钥与订阅账号、调度容错、日志与用量。",
+    "lang": "Go",
+    "stars": 7135,
+    "forks": 792,
+    "gained": 38
+   },
+   {
+    "rank": 15,
+    "repo": "zeromicro/go-zero",
+    "id": 285864199,
+    "desc": "A cloud-native Go microservices framework with cli tool for productivity.",
+    "lang": "Go",
+    "stars": 33382,
+    "forks": 4331,
+    "gained": 5
+   },
+   {
+    "rank": 16,
+    "repo": "router-for-me/CLIProxyAPI",
+    "id": 1012087571,
+    "desc": "Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Series, Claude model through API",
+    "lang": "Go",
+    "stars": 55420,
+    "forks": 8472,
+    "gained": 149
+   },
+   {
+    "rank": 17,
+    "repo": "gotenberg/gotenberg",
+    "id": 126493684,
+    "desc": "A developer-friendly API for converting many document formats into PDF files, and more!",
+    "lang": "Go",
+    "stars": 13308,
+    "forks": 871,
+    "gained": 16
+   },
+   {
+    "rank": 18,
+    "repo": "bytebase/bytebase",
+    "id": 333303663,
+    "desc": "Database governance built for humans and agents — controlling changes and access across every major database.",
+    "lang": "Go",
+    "stars": 14574,
+    "forks": 995,
+    "gained": 9
+   },
+   {
+    "rank": 19,
+    "repo": "skyhook-io/radar",
+    "id": 1137865761,
+    "desc": "The missing open-source Kubernetes UI with a built-in MCP server for AI agents. See what's broken, why, and what changed. Issues, Topology, event timeline, Helm, GitOps, live service traffic, and cluster audits - all in one Go binary.",
+    "lang": "Go",
+    "stars": 3818,
+    "forks": 245,
+    "gained": 16
+   },
+   {
+    "rank": 20,
+    "repo": "prometheus/node_exporter",
+    "id": 9524057,
+    "desc": "Exporter for machine metrics",
+    "lang": "Go",
+    "stars": 13845,
+    "forks": 2729,
+    "gained": 2
+   }
+  ],
+  "rust:daily": [
+   {
+    "rank": 1,
+    "repo": "xerj-org/xerj",
+    "id": 1284653133,
+    "desc": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+    "lang": "Rust",
+    "stars": 6439,
+    "forks": 326,
+    "gained": 1647
+   },
+   {
+    "rank": 2,
+    "repo": "ruvnet/RuView",
+    "id": 997737944,
+    "desc": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "lang": "Rust",
+    "stars": 98287,
+    "forks": 12877,
+    "gained": 225
+   },
+   {
+    "rank": 3,
+    "repo": "akitaonrails/ai-memory",
+    "id": 1246148135,
+    "desc": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+    "lang": "Rust",
+    "stars": 9497,
+    "forks": 676,
+    "gained": 159
+   },
+   {
+    "rank": 4,
+    "repo": "cloud-hypervisor/cloud-hypervisor",
+    "id": 184341774,
+    "desc": "A Virtual Machine Monitor for modern Cloud workloads. Features include CPU, memory and device hotplug, support for running Windows and Linux guests, device offload with vhost-user and a minimal compact footprint. Written in Rust with a strong focus on security.",
+    "lang": "Rust",
+    "stars": 6368,
+    "forks": 800,
+    "gained": 17
+   },
+   {
+    "rank": 5,
+    "repo": "hydra-db/hydradb",
+    "id": 1287908540,
+    "desc": "HydraDB - fast graph database on object storage",
+    "lang": "Rust",
+    "stars": 13035,
+    "forks": 5433,
+    "gained": 17
+   },
+   {
+    "rank": 6,
+    "repo": "rtk-ai/rtk",
+    "id": 1139971460,
+    "desc": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+    "lang": "Rust",
+    "stars": 83589,
+    "forks": 5304,
+    "gained": 169
+   },
+   {
+    "rank": 7,
+    "repo": "pollen-robotics/microduck",
+    "id": 1315850547,
+    "desc": "A Tiny biped duck robot 🦆",
+    "lang": "Rust",
+    "stars": 9472,
+    "forks": 1231,
+    "gained": 40
+   },
+   {
+    "rank": 8,
+    "repo": "voidzero-dev/vite-plus",
+    "id": 943901988,
+    "desc": "The unified toolchain and entry point for web development.",
+    "lang": "Rust",
+    "stars": 6289,
+    "forks": 279,
+    "gained": 87
+   },
+   {
+    "rank": 9,
+    "repo": "ai-dynamo/dynamo",
+    "id": 942206898,
+    "desc": "A Datacenter Scale Distributed Inference Serving Framework",
+    "lang": "Rust",
+    "stars": 8310,
+    "forks": 1713,
+    "gained": 11
+   },
+   {
+    "rank": 10,
+    "repo": "rustdesk/rustdesk",
+    "id": 299354207,
+    "desc": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
+    "lang": "Rust",
+    "stars": 125994,
+    "forks": 19746,
+    "gained": 124
+   },
+   {
+    "rank": 11,
+    "repo": "Automattic/harper",
+    "id": 708266011,
+    "desc": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+    "lang": "Rust",
+    "stars": 16497,
+    "forks": 751,
+    "gained": 41
+   },
+   {
+    "rank": 12,
+    "repo": "magnitudedev/magnitude",
+    "id": 1267145484,
+    "desc": "Open source inference engine that tunes its kernels on your hardware to find the fastest way to run each model. 2x faster than Ollama. Works on Apple Silicon, NVIDIA, AMD, or just a CPU.",
+    "lang": "Rust",
+    "stars": 6944,
+    "forks": 478,
+    "gained": 196
+   }
+  ],
+  "java:daily": [
+   {
+    "rank": 1,
+    "repo": "NationalSecurityAgency/ghidra",
+    "id": 173228436,
+    "desc": "Ghidra is a software reverse engineering (SRE) framework",
+    "lang": "Java",
+    "stars": 89306,
+    "forks": 9976,
+    "gained": 1185
+   },
+   {
+    "rank": 2,
+    "repo": "keycloak/keycloak",
+    "id": 11125589,
+    "desc": "Open Source Identity and Access Management For Modern Applications and Services",
+    "lang": "Java",
+    "stars": 37391,
+    "forks": 9065,
+    "gained": 18
+   },
+   {
+    "rank": 3,
+    "repo": "yash-srivastava/Overdrive-release",
+    "id": 1144397045,
+    "desc": "Advanced Sentry Mode for BYD Vehicles",
+    "lang": "Java",
+    "stars": 363,
+    "forks": 103,
+    "gained": 5
+   },
+   {
+    "rank": 4,
+    "repo": "bk138/droidVNC-NG",
+    "id": 316240505,
+    "desc": "Android VNC remote desktop server for local networks",
+    "lang": "Java",
+    "stars": 2396,
+    "forks": 320,
+    "gained": 5
+   },
+   {
+    "rank": 5,
+    "repo": "ashishps1/awesome-system-design-resources",
+    "id": 709589487,
+    "desc": "Learn System Design concepts and prepare for interviews using free resources.",
+    "lang": "Java",
+    "stars": 42345,
+    "forks": 8847,
+    "gained": 46
+   },
+   {
+    "rank": 6,
+    "repo": "modelcontextprotocol/java-sdk",
+    "id": 919609219,
+    "desc": "The official Java SDK for Model Context Protocol servers and clients. Maintained in collaboration with Spring AI",
+    "lang": "Java",
+    "stars": 3739,
+    "forks": 1171,
+    "gained": 3
+   },
+   {
+    "rank": 7,
+    "repo": "zinja-coder/jadx-ai-mcp",
+    "id": 962125208,
+    "desc": "Plugin for JADX to integrate MCP server",
+    "lang": "Java",
+    "stars": 2907,
+    "forks": 273,
+    "gained": 5
+   },
+   {
+    "rank": 8,
+    "repo": "iflytek/skillhub",
+    "id": 1178833585,
+    "desc": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy on-premise with Docker or Kubernetes.",
+    "lang": "Java",
+    "stars": 5233,
+    "forks": 848,
+    "gained": 14
+   },
+   {
+    "rank": 9,
+    "repo": "kestra-io/kestra",
+    "id": 204164353,
+    "desc": "Event Driven Orchestration & Scheduling Platform for Mission Critical Applications",
+    "lang": "Java",
+    "stars": 29655,
+    "forks": 3407,
+    "gained": 45
+   },
+   {
+    "rank": 10,
+    "repo": "zhukunpenglinyutong/jetbrains-cc-gui",
+    "id": 1100259232,
+    "desc": "Jetbrains Claude Code and Codex GUI Plugin",
+    "lang": "Java",
+    "stars": 7043,
+    "forks": 681,
+    "gained": 21
+   },
+   {
+    "rank": 11,
+    "repo": "thingsboard/thingsboard",
+    "id": 75277003,
+    "desc": "All-in-one IoT Platform - Device management, data collection, processing and visualization.",
+    "lang": "Java",
+    "stars": 22563,
+    "forks": 6517,
+    "gained": 5
+   },
+   {
+    "rank": 12,
+    "repo": "freeok/so-novel",
+    "id": 495476220,
+    "desc": "小说下载｜网文下载 | 网络小说",
+    "lang": "Java",
+    "stars": 8586,
+    "forks": 755,
+    "gained": 125
+   },
+   {
+    "rank": 13,
+    "repo": "apache/seatunnel",
+    "id": 99412308,
+    "desc": "SeaTunnel is a multimodal, high-performance, distributed, massive data integration tool.",
+    "lang": "Java",
+    "stars": 9732,
+    "forks": 2433,
+    "gained": 8
+   },
+   {
+    "rank": 14,
+    "repo": "adityatandon15/Low-Level-Design-Course",
+    "id": 938856534,
+    "desc": "All Code of LLD Playlist",
+    "lang": "Java",
+    "stars": 1376,
+    "forks": 929,
+    "gained": 4
+   },
+   {
+    "rank": 15,
+    "repo": "debezium/debezium",
+    "id": 50205233,
+    "desc": "Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues.",
+    "lang": "Java",
+    "stars": 13229,
+    "forks": 3085,
+    "gained": 9
+   },
+   {
+    "rank": 16,
+    "repo": "spring-projects/spring-framework",
+    "id": 1148753,
+    "desc": "Spring Framework",
+    "lang": "Java",
+    "stars": 60292,
+    "forks": 38753,
+    "gained": 6
+   },
+   {
+    "rank": 17,
+    "repo": "DependencyTrack/dependency-track",
+    "id": 11457947,
+    "desc": "Dependency-Track is an intelligent Component Analysis platform that allows organizations to identify and reduce risk in the software supply chain.",
+    "lang": "Java",
+    "stars": 4286,
+    "forks": 828,
+    "gained": 3
+   },
+   {
+    "rank": 18,
+    "repo": "StarRocks/starrocks",
+    "id": 402945349,
+    "desc": "The world's fastest open query engine for sub-second analytics both on and off the data lakehouse. With the flexibility to support nearly any scenario, StarRocks provides best-in-class performance for multi-dimensional analytics, real-time analytics, and ad-hoc queries. A Linux Foundation project.",
+    "lang": "Java",
+    "stars": 12181,
+    "forks": 2620,
+    "gained": 7
+   },
+   {
+    "rank": 19,
+    "repo": "648540858/wvp-GB28181-pro",
+    "id": 312830970,
+    "desc": "基于GB28181-2016、部标808、部标1078标准实现的开箱即用的网络视频平台。自带管理页面，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR接入。支持国标级联，支持将普通摄像机/直播流/直播推流转国标共享到国标平台。",
+    "lang": "Java",
+    "stars": 7365,
+    "forks": 2115,
+    "gained": 6
+   }
+  ],
+  "cpp:daily": [
+   {
+    "rank": 1,
+    "repo": "ocornut/imgui",
+    "id": 22067521,
+    "desc": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+    "lang": "C++",
+    "stars": 76675,
+    "forks": 12080,
+    "gained": 19
+   },
+   {
+    "rank": 2,
+    "repo": "NVIDIA/cutlass",
+    "id": 112542515,
+    "desc": "CUDA Templates and Python DSLs for High-Performance Linear Algebra",
+    "lang": "C++",
+    "stars": 10600,
+    "forks": 2130,
+    "gained": 11
+   },
+   {
+    "rank": 3,
+    "repo": "geo-tp/ESP32-Bit-Pirate",
+    "id": 1014515436,
+    "desc": "A Hardware Hacking Tool with Web-Based CLI That Speaks Every Protocol",
+    "lang": "C++",
+    "stars": 6130,
+    "forks": 525,
+    "gained": 78
+   },
+   {
+    "rank": 4,
+    "repo": "mozilla-ai/llamafile",
+    "id": 689773665,
+    "desc": "Distribute and run LLMs with a single file.",
+    "lang": "C++",
+    "stars": 26320,
+    "forks": 1694,
+    "gained": 56
+   },
+   {
+    "rank": 5,
+    "repo": "duckdb/duckdb",
+    "id": 138754790,
+    "desc": "DuckDB is an analytical in-process SQL database management system",
+    "lang": "C++",
+    "stars": 42199,
+    "forks": 3944,
+    "gained": 28
+   },
+   {
+    "rank": 6,
+    "repo": "78/xiaozhi-esp32",
+    "id": 850267588,
+    "desc": "An MCP-based chatbot | 一个基于MCP的聊天机器人",
+    "lang": "C++",
+    "stars": 31254,
+    "forks": 7304,
+    "gained": 119
+   },
+   {
+    "rank": 7,
+    "repo": "DamRsn/NeuralNote",
+    "id": 609103288,
+    "desc": "Audio Plugin for Audio to MIDI transcription using deep learning.",
+    "lang": "C++",
+    "stars": 3187,
+    "forks": 227,
+    "gained": 33
+   },
+   {
+    "rank": 8,
+    "repo": "zeldaret/botw",
+    "id": 288736599,
+    "desc": "Decompilation of The Legend of Zelda: Breath of the Wild (Switch 1.5.0)",
+    "lang": "C++",
+    "stars": 2239,
+    "forks": 139,
+    "gained": 14
+   },
+   {
+    "rank": 9,
+    "repo": "LittleBitUA/DownpourRecomp",
+    "id": 1274423441,
+    "desc": "Silent Hill: Downpour — native Windows PC port via static recompilation of the Xbox 360 binary. v1.0 stable: 60 FPS unlocked, ROV warm-cache, standalone launcher, DualSense adaptive triggers, portable saves. Tested on USA + Europe X360 dumps.",
+    "lang": "C++",
+    "stars": 293,
+    "forks": 5,
+    "gained": 10
+   },
+   {
+    "rank": 10,
+    "repo": "ran-j/PS2Recomp",
+    "id": 964985362,
+    "desc": "Playstation 2 Static Recompiler & Runtime Tool to make native PC ports",
+    "lang": "C++",
+    "stars": 3527,
+    "forks": 187,
+    "gained": 33
+   },
+   {
+    "rank": 11,
+    "repo": "protocolbuffers/protobuf",
+    "id": 23357588,
+    "desc": "Protocol Buffers - Google's data interchange format",
+    "lang": "C++",
+    "stars": 72115,
+    "forks": 16314,
+    "gained": 4
+   }
+  ]
+ }
+}
