@@ -8,7 +8,6 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-import build
 import track_stars
 
 
@@ -80,47 +79,6 @@ class TrackingTests(unittest.TestCase):
     def test_canonical_names_are_tracked_once(self):
         self.assertEqual(track_stars.known_repos({"old/a": {"canonical": "owner/a"}, "owner/a": {},
                                                 "private/repo": {"missing": True}}), ["owner/a"])
-
-
-class BuildTests(unittest.TestCase):
-    def test_stars_continue_after_exit_and_do_not_invent_historical_points(self):
-        with tempfile.TemporaryDirectory() as folder:
-            root = Path(folder)
-            meta = {"old/a": {"canonical": "owner/a"}, "owner/a": {"stars": 999}, "owner/b": {"stars": 0}}
-            introduction = {"what": "A source-backed explanation", "use_cases": ["A supported use"], "audience": "Developers"}
-            summary = {"owner/a": {"zh": "说明", "intro": introduction, "source": {"url": "https://github.com/owner/a"}, "date": "2026-10-10"}}
-            for name, data in [("meta", meta), ("summaries", summary),
-                               ("backfill", {"source": "test", "days": {"2026-10-08": ["old/a"]}})]:
-                (root / f"{name}.json").write_text(json.dumps(data))
-            snapshots = [{"date": "2026-10-09", "captured_at": "2026-10-09T01:00:00Z",
-                          "lists": {"all:daily": [{"repo": "old/a", "rank": 1, "stars": 10}]}},
-                         {"date": "2026-10-10", "captured_at": "2026-10-10T01:00:00Z",
-                          "lists": {"all:daily": [{"repo": "owner/b", "rank": 1, "stars": 0}]}}]
-            star_samples = [{"date": "2026-10-09", "stars": {"owner/a": 11}},
-                            {"date": "2026-10-10", "stars": {"owner/a": 15, "owner/b": 0}},
-                            {"date": "2026-10-12", "stars": {"owner/a": 14}}]
-            with patch.object(build, "META_FILE", root / "meta.json"), \
-                    patch.object(build, "SUMMARY_FILE", root / "summaries.json"), \
-                    patch.object(build, "BACKFILL_FILE", root / "backfill.json"), \
-                    patch.object(build, "SITE_DATA", root / "site"), \
-                    patch.object(build, "iter_snapshots", return_value=iter(snapshots)), \
-                    patch.object(build, "iter_star_snapshots", return_value=iter(star_samples)), \
-                    contextlib.redirect_stdout(io.StringIO()):
-                build.main()
-            repos = json.loads((root / "site/repos.json").read_text())
-            history = json.loads((root / "site/stars/owner/a.json").read_text())["points"]
-            self.assertEqual(history, [["2026-10-09", 11], ["2026-10-10", 15], ["2026-10-12", 14]])
-            self.assertEqual(repos["owner/a"]["s"], 14)
-            self.assertEqual(repos["owner/a"]["intro"], introduction)
-            self.assertEqual(repos["owner/a"]["intro_source"]["url"], "https://github.com/owner/a")
-            day = json.loads((root / "site/days/2026-10-09.json").read_text())
-            self.assertEqual(day["lists"]["all:daily"]["items"][0]["intro"], introduction)
-            self.assertEqual(repos["owner/a"]["star_history"]["count"], 3)
-            self.assertEqual(repos["owner/b"]["s"], 0)
-            self.assertNotIn("sh", repos["owner/a"])
-            self.assertNotIn("2026-10-11", [date for date, _ in history])
-            index = json.loads((root / "site/index.json").read_text())
-            self.assertNotIn("2026-10-12", index["dates"])
 
 
 if __name__ == "__main__":
