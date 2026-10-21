@@ -53,7 +53,7 @@ def run_script(name, *args):
 
 
 def prepare_sources():
-    run_script("prepare_introductions.py", "--limit", "24", "--output", SOURCE_FILE)
+    run_script("prepare_introductions.py", "--output", SOURCE_FILE)   # batch size: config.json "introductions"
 
 
 def capture():
@@ -67,20 +67,28 @@ def capture():
     prepare_sources()
 
 
+SITE_ALLOWED = {"index.html", "assets", "data", ".nojekyll", "CNAME", "404.html", "robots.txt"}
+SITE_REQUIRED = ["index.html", "assets/app.css", "assets/favicon.svg", "assets/js/main.js",
+                 "data/index.json", "data/home.json", "data/catalog.json", "data/search.json",
+                 "data/insights.json"]
+
+
 def check_site(site):
     site = Path(site)
-    allowed = {"index.html", "app.js", "style.css", "vendor", "data", ".nojekyll", "CNAME", "404.html"}
-    if any(path.name not in allowed for path in site.iterdir()):
+    if any(path.name not in SITE_ALLOWED for path in site.iterdir()):
         raise RuntimeError("Unexpected file in site/; review it before public publication")
-    for name in ["index.html", "app.js", "style.css", "vendor/echarts.min.js", "data/index.json", "data/repos.json"]:
+    for name in SITE_REQUIRED:
         if not (site / name).is_file():
             raise RuntimeError(f"Missing publication file: {name}")
     if any(path.is_symlink() for path in site.rglob("*")):
         raise RuntimeError("Publication must contain regular static files, without symbolic links")
     index = load_json(site / "data/index.json", {})
     day = load_json(site / "data/days" / f"{index.get('latest')}.json", {})
-    if not day.get("lists", {}).get("all:daily", {}).get("items"):
+    if not day.get("lists", {}).get("all:daily"):
         raise RuntimeError("The latest daily list is empty")
+    shards = index.get("shards", 0)
+    if not shards or len(list((site / "data/repo").glob("*.json"))) != shards:
+        raise RuntimeError("Repository detail shards are incomplete")
     return index
 
 

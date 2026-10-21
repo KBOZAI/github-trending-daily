@@ -11,6 +11,11 @@
     {"key": "java", "name": "Java", "path": "java", "periods": ["daily"]},
     {"key": "cpp", "name": "C++", "path": "c++", "periods": ["daily"]}
   ],
+  "introductions": {
+    "per_run": 24,
+    "backlog_per_day": 12,
+    "refresh_days": 30
+  },
   "llm": {
     "default_base_url": "https://open.bigmodel.cn/api/paas/v4",
     "default_model": "glm-4.7-flash",

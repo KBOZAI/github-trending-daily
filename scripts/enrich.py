@@ -13,7 +13,9 @@ from common import BACKFILL_FILE, META_FILE, github_token, http, iter_snapshots,
 FIELDS = """databaseId nameWithOwner description homepageUrl createdAt pushedAt
 stargazerCount forkCount isArchived isFork owner { __typename }
 primaryLanguage { name } licenseInfo { spdxId }
-repositoryTopics(first: 8) { nodes { topic { name } } }"""
+repositoryTopics(first: 8) { nodes { topic { name } } }
+latestRelease { tagName publishedAt }
+issues(states: OPEN) { totalCount }"""
 
 
 def query_batch(names, token):
@@ -49,6 +51,11 @@ def query_batch(names, token):
             "org": node["owner"]["__typename"] == "Organization",
             "fetched": today,
         }
+        release = node.get("latestRelease")
+        if release and release.get("tagName"):
+            entry["release"] = {"tag": release["tagName"], "date": (release.get("publishedAt") or "")[:10]}
+        if (node.get("issues") or {}).get("totalCount") is not None:
+            entry["issues"] = node["issues"]["totalCount"]
         if node["isArchived"]:
             entry["archived"] = True
         if node["isFork"]:
@@ -75,7 +82,10 @@ def main():
     meta = load_json(META_FILE, {})
     cutoff = (dt.date.fromisoformat(utc_today()) - dt.timedelta(days=args.refresh_days)).isoformat()
     todo = sorted(n for n in names if n not in meta)
-    todo += sorted(n for n in set(latest) if n in meta and meta[n]["fetched"] < cutoff)
+    # Repositories on the latest lists are refreshed monthly, and once early if their entry predates
+    # the release/issues fields (added in the 2026 rebuild); older entries stay valid without them.
+    todo += sorted(n for n in set(latest) if n in meta and (
+        meta[n]["fetched"] < cutoff or (not meta[n].get("missing") and "issues" not in meta[n])))
     print(f"{len(names)} repos known, {len(meta)} cached, {len(todo)} to fetch")
     token = github_token()
     if not token:

@@ -50,6 +50,57 @@ class IntroductionTests(unittest.TestCase):
             self.assertEqual(saved["source"]["readme_sha"], "abc")
             self.assertEqual(saved["model"], "codex-task")
 
+    def test_optional_fields_are_cleaned_and_bounded(self):
+        intro = summarize.normalise_intro({"what": "作用", "features": [" A ", "", 3, "B", "C", "D", "E"],
+                                           "notes": "需要 GPU"})
+        self.assertEqual(intro["features"], ["A", "B", "C", "D"])
+        self.assertNotIn("notes", intro)   # a string instead of a list is dropped, not guessed into a list
+        self.assertFalse(summarize.needs_summary({"version": 3, "src": summarize.desc_hash("d"), "date": "2026-10-10",
+                                                  "intro": {"what": "x"}}, "d", "2026-10-11"))
+
+    def test_backlog_projects_import_with_their_prepared_description(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "summaries.json").write_text("{}")
+            (root / "readmes.json").write_text(json.dumps({"old/famous": {"url": "https://github.com/old/famous", "sha": "s1",
+                                                                        "desc": "Famous tool"}}))
+            (root / "import.json").write_text(json.dumps([{"repo": "old/famous", "zh": "简介", "what": "作用",
+                                                           "notes": ["需要 Docker"], "tags": ["开发工具"]}]))
+            with patch.object(prep, "SUMMARY_FILE", root / "summaries.json"), \
+                    patch.object(prep, "README_FILE", root / "readmes.json"), \
+                    patch.object(prep, "latest_descriptions", return_value={"owner/a": "source"}), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                prep.apply_introductions(root / "import.json")
+            saved = json.loads((root / "summaries.json").read_text())["old/famous"]
+        self.assertEqual(saved["src"], summarize.desc_hash("Famous tool"))
+        self.assertEqual(saved["intro"]["notes"], ["需要 Docker"])
+        self.assertEqual(saved["version"], summarize.VERSION)
+
+    def test_prepare_puts_latest_lists_first_and_caps_the_daily_backlog(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            today = "2026-10-21"
+            summaries = {"done/x": {"date": today, "zh": "x", "intro": {"what": "x"}, "version": 3}}
+            (root / "summaries.json").write_text(json.dumps(summaries))
+            (root / "readmes.json").write_text("{}")
+            (root / "meta.json").write_text("{}")
+            record = lambda repo, token: {"url": f"https://github.com/{repo}", "sha": None, "excerpt": "", "date": today}
+            backlog = [(f"old/{i}", {"desc": f"d{i}"}) for i in range(10)]
+            with patch.object(prep, "SUMMARY_FILE", root / "summaries.json"), \
+                    patch.object(prep, "README_FILE", root / "readmes.json"), \
+                    patch.object(prep, "META_FILE", root / "meta.json"), \
+                    patch.object(prep, "utc_today", return_value=today), \
+                    patch.object(prep, "github_token", return_value="token"), \
+                    patch.object(prep, "readme_record", side_effect=record), \
+                    patch.object(prep, "latest_descriptions", return_value={"new/a": "A", "new/b": "B"}), \
+                    patch.object(prep, "backlog_candidates", return_value=backlog), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                prep.prepare(24, root / "out.json", backlog=4)
+            prepared = json.loads((root / "out.json").read_text())
+        self.assertEqual([p["repo"] for p in prepared["projects"]], ["new/a", "new/b", "old/0", "old/1", "old/2"])
+        self.assertEqual([p["reason"] for p in prepared["projects"]][-1], "backlog")
+        self.assertIn("notes", prepared["instructions"]["fields"])
+
     def test_readme_is_public_source_data_with_traceable_sha(self):
         import base64
         response = {"content": base64.b64encode(b"# Tool\n<!-- secret comment -->\n[Docs](https://example.com)\n![badge](https://x)").decode(),

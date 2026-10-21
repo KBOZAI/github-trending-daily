@@ -12,12 +12,16 @@ class PublicationTests(unittest.TestCase):
     def fixture(self, root):
         site = root / "site"
         (site / "data/days").mkdir(parents=True)
-        (site / "vendor").mkdir()
-        for name in ["index.html", "app.js", "style.css", "vendor/echarts.min.js"]:
+        (site / "data/repo").mkdir()
+        (site / "assets/js").mkdir(parents=True)
+        for name in ["index.html", "assets/app.css", "assets/favicon.svg", "assets/js/main.js"]:
             (site / name).write_text("static file")
-        (site / "data/index.json").write_text(json.dumps({"latest": "2026-10-11"}))
-        (site / "data/repos.json").write_text("{}")
-        (site / "data/days/2026-10-11.json").write_text(json.dumps({"lists": {"all:daily": {"items": [{"repo": "owner/repo"}]}}}))
+        for name in ["home", "catalog", "search", "insights"]:
+            (site / f"data/{name}.json").write_text("{}")
+        (site / "data/index.json").write_text(json.dumps({"latest": "2026-10-11", "shards": 2}))
+        for shard in ["00", "01"]:
+            (site / f"data/repo/{shard}.json").write_text("{}")
+        (site / "data/days/2026-10-11.json").write_text(json.dumps({"lists": {"all:daily": [{"r": "owner/repo", "k": 1}]}}))
         return site
 
     def test_invalid_site_does_not_remove_previous_publication(self):
@@ -49,6 +53,13 @@ class PublicationTests(unittest.TestCase):
             self.assertTrue((target / ".nojekyll").exists())
             self.assertTrue((target / "data/days/2026-10-11.json").exists())
 
+    def test_incomplete_detail_shards_are_rejected(self):
+        with tempfile.TemporaryDirectory() as folder:
+            site = self.fixture(Path(folder))
+            (site / "data/repo/01.json").unlink()
+            with self.assertRaises(RuntimeError):
+                codex_daily.check_site(site)
+
     def test_unexpected_files_and_symlinks_are_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -57,7 +68,7 @@ class PublicationTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 codex_daily.check_site(site)
             (site / ".env").unlink()
-            (site / "vendor/link").symlink_to(root)
+            (site / "assets/link").symlink_to(root)
             with self.assertRaises(RuntimeError):
                 codex_daily.check_site(site)
 
