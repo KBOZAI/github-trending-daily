@@ -2,32 +2,64 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GitHub 热榜日报</title>
-  <meta name="description" content="每天自动收集 GitHub Trending，附中文简介、上榜历史与趋势统计。">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Cpath d='M7 22l6-7 4 4 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GitHub 热榜日报 · 读懂每天值得关注的开源项目</title>
+  <meta name="description" content="每天整理 GitHub Trending：用中文讲清项目做什么、能解决什么问题、适合谁，并持续记录总 Stars 与上榜历史。">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141310" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="GitHub 热榜日报">
+  <meta property="og:description" content="读懂每天值得关注的开源项目：中文解读、总 Stars 观测与上榜历史。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="modulepreload" href="assets/js/main.js">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap top-inner">
-      <a class="brand" href="#/">
-        <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2563eb"/><path d="M7 22l6-7 4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        GitHub 热榜日报
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/" aria-label="GitHub 热榜日报 首页">
+        <svg class="seal" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7"/><rect class="seal-line" x="4.5" y="4.5" width="23" height="23" rx="4"/><path class="seal-bars" d="M9 23v-6h4v6zM14 23V10h4v13zM19 23v-9h4v9z"/></svg>
+        <span class="brand-name">GitHub 热榜日报</span>
       </a>
-      <nav class="tabs">
-        <a href="#/" data-tab="day">榜单</a>
-        <a href="#/stats" data-tab="stats">统计</a>
-        <a href="#/about" data-tab="about">说明</a>
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="#/" data-nav="home">今日</a>
+        <a href="#/day" data-nav="day">榜单</a>
+        <a href="#/explore" data-nav="explore">项目库</a>
+        <a href="#/insights" data-nav="insights">趋势</a>
+        <a href="#/about" data-nav="about">关于</a>
       </nav>
-      <form class="search" id="search-form" role="search">
-        <input id="search" type="search" placeholder="搜索项目、简介或话题" autocomplete="off">
-      </form>
+      <div class="search" id="global-search">
+        <button class="search-toggle" type="button" aria-label="搜索项目" data-action="open-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        </button>
+        <form class="search-form" role="search" autocomplete="off">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="search-input" type="search" placeholder="搜索项目、用途或话题" aria-label="搜索项目" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list" enterkeyhint="search">
+          <kbd class="search-kbd" aria-hidden="true">/</kbd>
+          <button class="search-close" type="button" aria-label="关闭搜索" data-action="close-search">取消</button>
+        </form>
+        <div class="search-results" id="search-results" role="listbox" hidden></div>
+      </div>
     </div>
   </header>
-  <main class="wrap" id="view"><p class="empty">加载中…</p></main>
-  <footer id="foot"></footer>
-  <script src="vendor/echarts.min.js" defer></script>
-  <script src="app.js" defer></script>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <noscript><p class="state">这个网站需要启用 JavaScript 才能浏览榜单与图表。</p></noscript>
+  </main>
+
+  <footer class="site-footer wrap" id="site-footer"></footer>
+
+  <nav class="tabbar" aria-label="快捷导航">
+    <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h10M4 20h7"/></svg>今日</a>
+    <a href="#/day" data-nav="day"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-7h4v7zM10 20V5h4v15zM15 20v-10h4v10z"/></svg>榜单</a>
+    <a href="#/explore" data-nav="explore"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>项目库</a>
+    <a href="#/insights" data-nav="insights"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 9.5 12l4 3.5L20 7"/><path d="M15 7h5v5"/></svg>趋势</a>
+    <a href="#/about" data-nav="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v6M12 7.5v.5"/></svg>关于</a>
+  </nav>
+
+  <div class="compare-tray" id="compare-tray" hidden></div>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
