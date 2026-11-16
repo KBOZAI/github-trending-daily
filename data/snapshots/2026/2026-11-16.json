@@ -1,0 +1,1850 @@
+{
+ "date": "2026-11-16",
+ "captured_at": "2026-11-16T16:56:34Z",
+ "lists": {
+  "all:daily": [
+   {
+    "rank": 1,
+    "repo": "ag-ui-protocol/ag-ui",
+    "id": 979392131,
+    "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+    "lang": "TypeScript",
+    "stars": 18639,
+    "forks": 1914,
+    "gained": 790
+   },
+   {
+    "rank": 2,
+    "repo": "backnotprop/plannotator",
+    "id": 1123956658,
+    "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+    "lang": "TypeScript",
+    "stars": 12365,
+    "forks": 1164,
+    "gained": 689
+   },
+   {
+    "rank": 3,
+    "repo": "dream-num/univer",
+    "id": 543101941,
+    "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+    "lang": "TypeScript",
+    "stars": 27616,
+    "forks": 2514,
+    "gained": 1878
+   },
+   {
+    "rank": 4,
+    "repo": "tradermonty/claude-trading-skills",
+    "id": 1079356098,
+    "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+    "lang": "Python",
+    "stars": 6119,
+    "forks": 1279,
+    "gained": 841
+   },
+   {
+    "rank": 5,
+    "repo": "getarcaneapp/arcane",
+    "id": 968905557,
+    "desc": "Modern Docker Management, Designed for Everyone",
+    "lang": "Go",
+    "stars": 8535,
+    "forks": 365,
+    "gained": 31
+   },
+   {
+    "rank": 6,
+    "repo": "DeanChensj/jiangshan-map",
+    "id": 1310427454,
+    "desc": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+    "lang": "JavaScript",
+    "stars": 6618,
+    "forks": 749,
+    "gained": 285
+   },
+   {
+    "rank": 7,
+    "repo": "google-labs-code/stitch-skills",
+    "id": 1135847870,
+    "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+    "lang": "TypeScript",
+    "stars": 9649,
+    "forks": 1208,
+    "gained": 540
+   },
+   {
+    "rank": 8,
+    "repo": "mvanhorn/last30days-skill",
+    "id": 1140843380,
+    "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "lang": "Python",
+    "stars": 67947,
+    "forks": 5987,
+    "gained": 122
+   },
+   {
+    "rank": 9,
+    "repo": "NVIDIA/SkillEvaluator",
+    "id": 1278676884,
+    "desc": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+    "lang": "Python",
+    "stars": 2422,
+    "forks": 308,
+    "gained": 953
+   },
+   {
+    "rank": 10,
+    "repo": "alibaba/open-code-review",
+    "id": 1241960226,
+    "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+    "lang": "Go",
+    "stars": 52787,
+    "forks": 4244,
+    "gained": 946
+   },
+   {
+    "rank": 11,
+    "repo": "google-research/paper-orchestra",
+    "id": 1226691771,
+    "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+    "lang": "Python",
+    "stars": 1219,
+    "forks": 195,
+    "gained": 306
+   },
+   {
+    "rank": 12,
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "id": 1054793726,
+    "desc": "Chrome DevTools for coding agents",
+    "lang": "TypeScript",
+    "stars": 57539,
+    "forks": 4842,
+    "gained": 837
+   },
+   {
+    "rank": 13,
+    "repo": "sveltejs/svelte",
+    "id": 74293321,
+    "desc": "web development for the rest of us",
+    "lang": "JavaScript",
+    "stars": 88838,
+    "forks": 6048,
+    "gained": 58
+   },
+   {
+    "rank": 14,
+    "repo": "kajisho5/ffmpeg-skill",
+    "id": 1356077516,
+    "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+    "lang": "Python",
+    "stars": 6399,
+    "forks": 562,
+    "gained": 475
+   }
+  ],
+  "all:weekly": [
+   {
+    "rank": 1,
+    "repo": "GoogleChrome/modern-web-guidance-src",
+    "id": 1143633223,
+    "desc": "Keep your coding agent up to date with the latest web best practices",
+    "lang": "TypeScript",
+    "stars": 7858,
+    "forks": 689,
+    "gained": 5692
+   },
+   {
+    "rank": 2,
+    "repo": "meta/astryx",
+    "id": 1131202426,
+    "desc": "An open source design system that's fully customizable and agent ready",
+    "lang": "TypeScript",
+    "stars": 29441,
+    "forks": 2295,
+    "gained": 13501
+   },
+   {
+    "rank": 3,
+    "repo": "backnotprop/plannotator",
+    "id": 1123956658,
+    "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+    "lang": "TypeScript",
+    "stars": 12365,
+    "forks": 1164,
+    "gained": 1719
+   },
+   {
+    "rank": 4,
+    "repo": "anthropics/skills",
+    "id": 1061953414,
+    "desc": "Public repository for Agent Skills",
+    "lang": "Python",
+    "stars": 195830,
+    "forks": 22993,
+    "gained": 6077
+   },
+   {
+    "rank": 5,
+    "repo": "vercel-labs/agent-browser",
+    "id": 1132001614,
+    "desc": "Browser automation CLI for AI agents",
+    "lang": "Rust",
+    "stars": 51915,
+    "forks": 3626,
+    "gained": 4217
+   },
+   {
+    "rank": 6,
+    "repo": "we-promise/sure",
+    "id": 1024661423,
+    "desc": "The personal finance app for everyone (by everyone)",
+    "lang": "Ruby",
+    "stars": 15916,
+    "forks": 1389,
+    "gained": 4556
+   },
+   {
+    "rank": 7,
+    "repo": "ZhuLinsen/daily_stock_analysis",
+    "id": 1131513930,
+    "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+    "lang": "Python",
+    "stars": 72749,
+    "forks": 57656,
+    "gained": 4548
+   },
+   {
+    "rank": 8,
+    "repo": "sherlock-project/sherlock",
+    "id": 162998479,
+    "desc": "Hunt down social media accounts by username across social networks",
+    "lang": "Python",
+    "stars": 113002,
+    "forks": 13024,
+    "gained": 10412
+   },
+   {
+    "rank": 9,
+    "repo": "google/elephant-goldfish-model",
+    "id": 1368596582,
+    "desc": "Open-source plugin for designing and reviewing software with agents",
+    "lang": "Python",
+    "stars": 20227,
+    "forks": 1497,
+    "gained": 5060
+   },
+   {
+    "rank": 10,
+    "repo": "google-deepmind/mujoco",
+    "id": 400501136,
+    "desc": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+    "lang": "C++",
+    "stars": 18158,
+    "forks": 2205,
+    "gained": 1922
+   },
+   {
+    "rank": 11,
+    "repo": "alibaba/open-code-review",
+    "id": 1241960226,
+    "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+    "lang": "Go",
+    "stars": 52787,
+    "forks": 4244,
+    "gained": 2238
+   },
+   {
+    "rank": 12,
+    "repo": "addyosmani/agent-skills",
+    "id": 1158722119,
+    "desc": "Production-grade engineering skills for AI coding agents.",
+    "lang": "JavaScript",
+    "stars": 118219,
+    "forks": 12348,
+    "gained": 3889
+   },
+   {
+    "rank": 13,
+    "repo": "openai/codex-security",
+    "id": 1299769220,
+    "desc": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+    "lang": "TypeScript",
+    "stars": 13704,
+    "forks": 1070,
+    "gained": 2294
+   },
+   {
+    "rank": 14,
+    "repo": "QwenLM/qwen-code",
+    "id": 1008713177,
+    "desc": "An open-source AI coding agent that lives in your terminal.",
+    "lang": "TypeScript",
+    "stars": 30600,
+    "forks": 3545,
+    "gained": 1469
+   }
+  ],
+  "all:monthly": [
+   {
+    "rank": 1,
+    "repo": "Nutlope/hallmark",
+    "id": 1222917575,
+    "desc": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "lang": "CSS",
+    "stars": 55959,
+    "forks": 3013,
+    "gained": 25448
+   },
+   {
+    "rank": 2,
+    "repo": "cloudflare/security-audit-skill",
+    "id": 1273427276,
+    "desc": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+    "lang": "JavaScript",
+    "stars": 73695,
+    "forks": 4938,
+    "gained": 43540
+   },
+   {
+    "rank": 3,
+    "repo": "pingdotgg/t3code",
+    "id": 1153130349,
+    "desc": "The best way to control Claude Code, Codex and more from any computer or phone",
+    "lang": "TypeScript",
+    "stars": 62484,
+    "forks": 11126,
+    "gained": 33583
+   },
+   {
+    "rank": 4,
+    "repo": "thedotmack/claude-mem",
+    "id": 1048065319,
+    "desc": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+    "lang": "TypeScript",
+    "stars": 117589,
+    "forks": 10215,
+    "gained": 17038
+   },
+   {
+    "rank": 5,
+    "repo": "anthropics/skills",
+    "id": 1061953414,
+    "desc": "Public repository for Agent Skills",
+    "lang": "Python",
+    "stars": 195830,
+    "forks": 22993,
+    "gained": 14332
+   },
+   {
+    "rank": 6,
+    "repo": "pbakaus/impeccable",
+    "id": 1097346685,
+    "desc": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+    "lang": "Rust",
+    "stars": 111229,
+    "forks": 6648,
+    "gained": 29631
+   },
+   {
+    "rank": 7,
+    "repo": "HKUDS/DeepTutor",
+    "id": 1124219907,
+    "desc": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+    "lang": "Python",
+    "stars": 59724,
+    "forks": 7230,
+    "gained": 18278
+   },
+   {
+    "rank": 8,
+    "repo": "heygen-com/hyperframes",
+    "id": 1177402105,
+    "desc": "Write HTML. Render video. Built for agents.",
+    "lang": "TypeScript",
+    "stars": 85094,
+    "forks": 7884,
+    "gained": 20878
+   },
+   {
+    "rank": 9,
+    "repo": "sherlock-project/sherlock",
+    "id": 162998479,
+    "desc": "Hunt down social media accounts by username across social networks",
+    "lang": "Python",
+    "stars": 113002,
+    "forks": 13024,
+    "gained": 18371
+   },
+   {
+    "rank": 10,
+    "repo": "Leonxlnx/taste-skill",
+    "id": 1162099055,
+    "desc": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
+    "lang": "JavaScript",
+    "stars": 116690,
+    "forks": 7819,
+    "gained": 19546
+   },
+   {
+    "rank": 11,
+    "repo": "AgriciDaniel/claude-seo",
+    "id": 1152014594,
+    "desc": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+    "lang": "Python",
+    "stars": 29946,
+    "forks": 3772,
+    "gained": 10672
+   },
+   {
+    "rank": 12,
+    "repo": "anthropics/knowledge-work-plugins",
+    "id": 1140828898,
+    "desc": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+    "lang": "Python",
+    "stars": 36271,
+    "forks": 4003,
+    "gained": 6417
+   },
+   {
+    "rank": 13,
+    "repo": "backnotprop/plannotator",
+    "id": 1123956658,
+    "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+    "lang": "TypeScript",
+    "stars": 12365,
+    "forks": 1164,
+    "gained": 2237
+   },
+   {
+    "rank": 14,
+    "repo": "Vincentwei1021/video-shotcraft",
+    "id": 1305663861,
+    "desc": "AI video skill for Claude Code & Codex — cinematic, editable product promos with Remotion: 124 shot recipe cards, 150 motion previews, beat sync, sound design, Motion Workbench & JianYing (CapCut CN) export.",
+    "lang": "TypeScript",
+    "stars": 20452,
+    "forks": 1896,
+    "gained": 7937
+   },
+   {
+    "rank": 15,
+    "repo": "vercel-labs/agent-browser",
+    "id": 1132001614,
+    "desc": "Browser automation CLI for AI agents",
+    "lang": "Rust",
+    "stars": 51915,
+    "forks": 3626,
+    "gained": 7545
+   }
+  ],
+  "zh:daily": [
+   {
+    "rank": 1,
+    "repo": "xiaojieonly/Ehviewer_CN_SXJ",
+    "id": 311241324,
+    "desc": "ehviewer，用爱发电，快乐前行",
+    "lang": "C",
+    "stars": 29204,
+    "forks": 784,
+    "gained": 69
+   },
+   {
+    "rank": 2,
+    "repo": "OI-wiki/OI-wiki",
+    "id": 140516736,
+    "desc": "🌟 Wiki of OI / ICPC for everyone. （某大型游戏线上攻略，内含炫酷算术魔法）",
+    "lang": "TypeScript",
+    "stars": 27173,
+    "forks": 4705,
+    "gained": 8
+   },
+   {
+    "rank": 3,
+    "repo": "521xueweihan/HelloGitHub",
+    "id": 58028038,
+    "desc": "分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",
+    "lang": "Python",
+    "stars": 189316,
+    "forks": 13311,
+    "gained": 254
+   },
+   {
+    "rank": 4,
+    "repo": "maotoumao/MusicFree",
+    "id": 527600676,
+    "desc": "插件化、定制化、无广告的免费音乐播放器",
+    "lang": "TypeScript",
+    "stars": 28604,
+    "forks": 2034,
+    "gained": 37
+   },
+   {
+    "rank": 5,
+    "repo": "coolsnowwolf/lede",
+    "id": 102578345,
+    "desc": "Lean's LEDE source",
+    "lang": "C",
+    "stars": 31627,
+    "forks": 19034,
+    "gained": 3
+   },
+   {
+    "rank": 6,
+    "repo": "hiroi-sora/Umi-OCR",
+    "id": 474839179,
+    "desc": "OCR software, free and offline. 开源、免费的离线OCR软件。支持截屏/批量导入图片，PDF文档识别，排除水印/页眉页脚，扫描/生成二维码。内置多国语言库。",
+    "lang": "Python",
+    "stars": 48738,
+    "forks": 4762,
+    "gained": 33
+   },
+   {
+    "rank": 7,
+    "repo": "aoaostar/legado",
+    "id": 571581970,
+    "desc": "阅读APP书源",
+    "lang": "HTML",
+    "stars": 7429,
+    "forks": 323,
+    "gained": 39
+   },
+   {
+    "rank": 8,
+    "repo": "sngyai/Sequoia-X",
+    "id": 141734943,
+    "desc": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
+    "lang": "Python",
+    "stars": 8669,
+    "forks": 1720,
+    "gained": 7
+   },
+   {
+    "rank": 9,
+    "repo": "Stapxs/Stapxs-QQ-Lite-2.0",
+    "id": 560210016,
+    "desc": "一个兼容 OneBot 协议的第三方 QQ 客户端。 Web、全平台实现！",
+    "lang": "Vue",
+    "stars": 1388,
+    "forks": 114,
+    "gained": 8
+   },
+   {
+    "rank": 10,
+    "repo": "HIllya51/LunaTranslator",
+    "id": 542386106,
+    "desc": "视觉小说翻译器 / Visual Novel Translator",
+    "lang": "C++",
+    "stars": 14186,
+    "forks": 1189,
+    "gained": 24
+   },
+   {
+    "rank": 11,
+    "repo": "ScottSloan/Bili23-Downloader",
+    "id": 466390618,
+    "desc": "开源、免费、跨平台的 B 站视频下载工具，支持多线程加速、音视频分离、弹幕元数据获取、自定义命名与分类等功能。Open Source, Free, Cross-Platform Bilibili Video Downloader.",
+    "lang": "Python",
+    "stars": 9231,
+    "forks": 660,
+    "gained": 42
+   },
+   {
+    "rank": 12,
+    "repo": "AstrBotDevs/AstrBot",
+    "id": 575865240,
+    "desc": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "lang": "Python",
+    "stars": 47052,
+    "forks": 3601,
+    "gained": 86
+   },
+   {
+    "rank": 13,
+    "repo": "langbot-app/LangBot",
+    "id": 575321313,
+    "desc": "Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Kimi, openclaw / hermes agent, deerflow",
+    "lang": "Python",
+    "stars": 19043,
+    "forks": 1711,
+    "gained": 35
+   },
+   {
+    "rank": 14,
+    "repo": "ruanyf/weekly",
+    "id": 152870372,
+    "desc": "科技爱好者周刊，每周五发布",
+    "lang": null,
+    "stars": 108164,
+    "forks": 4581,
+    "gained": 57
+   },
+   {
+    "rank": 15,
+    "repo": "XIU2/CloudflareSpeedTest",
+    "id": 291485614,
+    "desc": "🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~",
+    "lang": "Go",
+    "stars": 30003,
+    "forks": 5556,
+    "gained": 21
+   },
+   {
+    "rank": 16,
+    "repo": "zhayujie/CowAgent",
+    "id": 522158088,
+    "desc": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
+    "lang": "Python",
+    "stars": 47953,
+    "forks": 10433,
+    "gained": 12
+   },
+   {
+    "rank": 17,
+    "repo": "auto-novel/auto-novel",
+    "id": 559577341,
+    "desc": "轻小说机翻网站，支持网络小说/文库小说/本地小说",
+    "lang": "TypeScript",
+    "stars": 1300,
+    "forks": 111,
+    "gained": 10
+   },
+   {
+    "rank": 18,
+    "repo": "hanxinhao000/ZeroTermux",
+    "id": 378069880,
+    "desc": "",
+    "lang": "Java",
+    "stars": 3135,
+    "forks": 242,
+    "gained": 5
+   },
+   {
+    "rank": 19,
+    "repo": "nilaoda/N_m3u8DL-RE",
+    "id": 496221318,
+    "desc": "Cross-Platform, modern and powerful stream downloader for MPD/M3U8/ISM. English/简体中文/繁體中文.",
+    "lang": "C#",
+    "stars": 9085,
+    "forks": 896,
+    "gained": 4
+   },
+   {
+    "rank": 20,
+    "repo": "fmz200/wool_scripts",
+    "id": 529623205,
+    "desc": "收集一些Loon、Surge、QuantumultX、ShadowRocket、Egern的配置与去广告规则。",
+    "lang": "Vim Snippet",
+    "stars": 5999,
+    "forks": 332,
+    "gained": 10
+   },
+   {
+    "rank": 21,
+    "repo": "wanglin2/mind-map",
+    "id": 375741607,
+    "desc": "SimpleMindMap（思绪思维导图）：一个强大的思维导图。A powerful mind map.",
+    "lang": "JavaScript",
+    "stars": 12952,
+    "forks": 1697,
+    "gained": 7
+   },
+   {
+    "rank": 22,
+    "repo": "whyour/qinglong",
+    "id": 347404990,
+    "desc": "支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台（Timed task management platform supporting Python3, JavaScript, Shell, Typescript）",
+    "lang": "JavaScript",
+    "stars": 20109,
+    "forks": 3231,
+    "gained": 10
+   },
+   {
+    "rank": 23,
+    "repo": "cxasm/notepad--",
+    "id": 503592660,
+    "desc": "一个支持windows/linux/mac的文本编辑器，目标是做中国人自己的编辑器，来自中国。",
+    "lang": "C++",
+    "stars": 10660,
+    "forks": 410,
+    "gained": 6
+   },
+   {
+    "rank": 24,
+    "repo": "halo-dev/halo",
+    "id": 126178683,
+    "desc": "Halo 是一款强大易用的开源建站工具，从个人博客、知识库，到企业官网、在线商城，Halo 都能助您轻松实现，一站式满足您的多样化建站需求。",
+    "lang": "Java",
+    "stars": 40293,
+    "forks": 10315,
+    "gained": 16
+   }
+  ],
+  "python:daily": [
+   {
+    "rank": 1,
+    "repo": "tradermonty/claude-trading-skills",
+    "id": 1079356098,
+    "desc": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+    "lang": "Python",
+    "stars": 6119,
+    "forks": 1279,
+    "gained": 841
+   },
+   {
+    "rank": 2,
+    "repo": "mvanhorn/last30days-skill",
+    "id": 1140843380,
+    "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+    "lang": "Python",
+    "stars": 67947,
+    "forks": 5987,
+    "gained": 122
+   },
+   {
+    "rank": 3,
+    "repo": "NVIDIA/SkillEvaluator",
+    "id": 1278676884,
+    "desc": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+    "lang": "Python",
+    "stars": 2423,
+    "forks": 308,
+    "gained": 953
+   },
+   {
+    "rank": 4,
+    "repo": "google-research/paper-orchestra",
+    "id": 1226691771,
+    "desc": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+    "lang": "Python",
+    "stars": 1219,
+    "forks": 195,
+    "gained": 306
+   },
+   {
+    "rank": 5,
+    "repo": "kajisho5/ffmpeg-skill",
+    "id": 1356077516,
+    "desc": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+    "lang": "Python",
+    "stars": 6399,
+    "forks": 562,
+    "gained": 475
+   },
+   {
+    "rank": 6,
+    "repo": "isair/jarvis",
+    "id": 1040940947,
+    "desc": "A 100% private and local AI assistant for your desktop. Always present, able to jump into conversations. Supports unlimited MCP tools and unlimited memory with self-learning. Free WisprFlow alternative with its dictation support. Runs on macOS, Windows and Linux.",
+    "lang": "Python",
+    "stars": 2311,
+    "forks": 552,
+    "gained": 26
+   },
+   {
+    "rank": 7,
+    "repo": "openai/whisper",
+    "id": 537603333,
+    "desc": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "lang": "Python",
+    "stars": 112808,
+    "forks": 13661,
+    "gained": 123
+   },
+   {
+    "rank": 8,
+    "repo": "davila7/claude-code-templates",
+    "id": 1013480284,
+    "desc": "Open-source registry and CLI for Claude Code components: agents, commands, skills, hooks, MCPs, settings and mods",
+    "lang": "Python",
+    "stars": 33854,
+    "forks": 4001,
+    "gained": 119
+   },
+   {
+    "rank": 9,
+    "repo": "huggingface/transformers",
+    "id": 155220641,
+    "desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+    "lang": "Python",
+    "stars": 169031,
+    "forks": 35198,
+    "gained": 68
+   },
+   {
+    "rank": 10,
+    "repo": "ifixai-ai/iFixAi",
+    "id": 1222527844,
+    "desc": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+    "lang": "Python",
+    "stars": 46030,
+    "forks": 1815,
+    "gained": 313
+   },
+   {
+    "rank": 11,
+    "repo": "vstorm-co/agenticos",
+    "id": 1318197751,
+    "desc": "Open-source, self-hosted AI agent platform for your company's AI teammates. Build, run and govern agents on your own servers and models: shared chat, RAG, skills, a real browser, 4,700+ MCP servers, budgets, approvals and an audit trail. An alternative to ChatGPT Enterprise and Grok Bot. Apache-2.0, built on Pydantic AI.",
+    "lang": "Python",
+    "stars": 351,
+    "forks": 60,
+    "gained": 56
+   },
+   {
+    "rank": 12,
+    "repo": "HKUDS/Vibe-Trading",
+    "id": 1198306812,
+    "desc": "\"Vibe-Trading: Your Personal Trading Agent\"",
+    "lang": "Python",
+    "stars": 38375,
+    "forks": 6245,
+    "gained": 88
+   },
+   {
+    "rank": 13,
+    "repo": "bkerler/mtkclient",
+    "id": 1136797988,
+    "desc": "Mediatek Flash and Repair Utility",
+    "lang": "Python",
+    "stars": 1535,
+    "forks": 313,
+    "gained": 9
+   },
+   {
+    "rank": 14,
+    "repo": "FujiwaraChoki/supoclip",
+    "id": 1028035407,
+    "desc": "An open-source OpusClip alternative",
+    "lang": "Python",
+    "stars": 3290,
+    "forks": 736,
+    "gained": 103
+   },
+   {
+    "rank": 15,
+    "repo": "superdesigndev/treg",
+    "id": 1301657572,
+    "desc": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+    "lang": "Python",
+    "stars": 8158,
+    "forks": 770,
+    "gained": 89
+   }
+  ],
+  "jupyter:daily": [
+   {
+    "rank": 1,
+    "repo": "GoogleCloudPlatform/generative-ai",
+    "id": 636693030,
+    "desc": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini platform",
+    "lang": "Jupyter Notebook",
+    "stars": 17938,
+    "forks": 4524,
+    "gained": 30
+   },
+   {
+    "rank": 2,
+    "repo": "anthropics/claude-cookbooks",
+    "id": 678973052,
+    "desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+    "lang": "Jupyter Notebook",
+    "stars": 54760,
+    "forks": 6656,
+    "gained": 75
+   },
+   {
+    "rank": 3,
+    "repo": "openai/openai-cookbook",
+    "id": 468576060,
+    "desc": "Examples and guides for using the OpenAI API",
+    "lang": "Jupyter Notebook",
+    "stars": 77193,
+    "forks": 13072,
+    "gained": 51
+   },
+   {
+    "rank": 4,
+    "repo": "anthropics/courses",
+    "id": 808207942,
+    "desc": "Anthropic's educational courses",
+    "lang": "Jupyter Notebook",
+    "stars": 23121,
+    "forks": 2599,
+    "gained": 32
+   },
+   {
+    "rank": 5,
+    "repo": "karpathy/nn-zero-to-hero",
+    "id": 534397970,
+    "desc": "Neural Networks: Zero to Hero",
+    "lang": "Jupyter Notebook",
+    "stars": 25765,
+    "forks": 3739,
+    "gained": 62
+   },
+   {
+    "rank": 6,
+    "repo": "microsoft/generative-ai-for-beginners",
+    "id": 655806940,
+    "desc": "21 Lessons, Get Started Building with Generative AI",
+    "lang": "Jupyter Notebook",
+    "stars": 123671,
+    "forks": 66523,
+    "gained": 99
+   },
+   {
+    "rank": 7,
+    "repo": "anthropics/prompt-eng-interactive-tutorial",
+    "id": 781022269,
+    "desc": "Anthropic's Interactive Prompt Engineering Tutorial",
+    "lang": "Jupyter Notebook",
+    "stars": 39464,
+    "forks": 4376,
+    "gained": 106
+   },
+   {
+    "rank": 8,
+    "repo": "lyogavin/airllm",
+    "id": 652712035,
+    "desc": "AirLLM 2.8T LLM inference with single 4GB GPU",
+    "lang": "Jupyter Notebook",
+    "stars": 42497,
+    "forks": 4402,
+    "gained": 87
+   },
+   {
+    "rank": 9,
+    "repo": "microsoft/ai-agents-for-beginners",
+    "id": 895508656,
+    "desc": "18 Lessons to Get Started Building AI Agents",
+    "lang": "Jupyter Notebook",
+    "stars": 79822,
+    "forks": 26117,
+    "gained": 120
+   },
+   {
+    "rank": 10,
+    "repo": "microsoft/AI-For-Beginners",
+    "id": 344190478,
+    "desc": "12 Weeks, 24 Lessons, AI for All!",
+    "lang": "Jupyter Notebook",
+    "stars": 70910,
+    "forks": 13823,
+    "gained": 43
+   },
+   {
+    "rank": 11,
+    "repo": "FinanceFlash/unvibecode",
+    "id": 1322626201,
+    "desc": "Complex code hides connections, workflows, and business risks.Unvibe complex code. Trace business workflows.",
+    "lang": null,
+    "stars": 1835,
+    "forks": 180,
+    "gained": 55
+   },
+   {
+    "rank": 12,
+    "repo": "GokuMohandas/Made-With-ML",
+    "id": 156157055,
+    "desc": "Learn how to develop, deploy and iterate on production-grade ML applications.",
+    "lang": "Jupyter Notebook",
+    "stars": 50059,
+    "forks": 7820,
+    "gained": 36
+   },
+   {
+    "rank": 13,
+    "repo": "ageron/handson-ml3",
+    "id": 461147335,
+    "desc": "A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python using Scikit-Learn, Keras and TensorFlow 2.",
+    "lang": "Jupyter Notebook",
+    "stars": 14495,
+    "forks": 5400,
+    "gained": 9
+   },
+   {
+    "rank": 14,
+    "repo": "mrdbourke/zero-to-mastery-ml",
+    "id": 210267713,
+    "desc": "All course materials for the Zero to Mastery Machine Learning and Data Science course.",
+    "lang": "Jupyter Notebook",
+    "stars": 7583,
+    "forks": 4249,
+    "gained": 3
+   },
+   {
+    "rank": 15,
+    "repo": "alirezadir/AIMLInterviews",
+    "id": 334567245,
+    "desc": "A Comprehensive Guide for Generative AI, Agentic AI, Multimodal AI, Physical AI Interviews. Proven Formula for multiple FAANG offers and more",
+    "lang": "Jupyter Notebook",
+    "stars": 10003,
+    "forks": 1741,
+    "gained": 5
+   },
+   {
+    "rank": 16,
+    "repo": "microsoft/ML-For-Beginners",
+    "id": 343965132,
+    "desc": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
+    "lang": "Jupyter Notebook",
+    "stars": 92236,
+    "forks": 22931,
+    "gained": 51
+   },
+   {
+    "rank": 17,
+    "repo": "DataTalksClub/machine-learning-zoomcamp",
+    "id": 256401220,
+    "desc": "Learn ML engineering for free in 4 months! Register here 👇🏼",
+    "lang": "Jupyter Notebook",
+    "stars": 14977,
+    "forks": 3319,
+    "gained": 9
+   },
+   {
+    "rank": 18,
+    "repo": "ed-donner/llm_engineering",
+    "id": 850490697,
+    "desc": "Repo to accompany my mastering LLM engineering course",
+    "lang": "Jupyter Notebook",
+    "stars": 7989,
+    "forks": 7707,
+    "gained": 13
+   },
+   {
+    "rank": 19,
+    "repo": "facebookresearch/audiocraft",
+    "id": 650945129,
+    "desc": "Audiocraft is a library for audio processing and generation with deep learning. It features the state-of-the-art EnCodec audio compressor / tokenizer, along with MusicGen, a simple and controllable music generation LM with textual and melodic conditioning.",
+    "lang": "Jupyter Notebook",
+    "stars": 23888,
+    "forks": 2715,
+    "gained": 13
+   },
+   {
+    "rank": 20,
+    "repo": "facebookresearch/sam2",
+    "id": 835452752,
+    "desc": "The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+    "lang": "Jupyter Notebook",
+    "stars": 20164,
+    "forks": 2596,
+    "gained": 9
+   },
+   {
+    "rank": 21,
+    "repo": "DataTalksClub/llm-zoomcamp",
+    "id": 777814395,
+    "desc": "LLM Zoomcamp - a free online course about real-life applications of LLMs. In 10 weeks you will learn how to build an AI system that answers questions about your knowledge base. Register here 👇🏼",
+    "lang": "Jupyter Notebook",
+    "stars": 7680,
+    "forks": 1423,
+    "gained": 10
+   }
+  ],
+  "typescript:daily": [
+   {
+    "rank": 1,
+    "repo": "ag-ui-protocol/ag-ui",
+    "id": 979392131,
+    "desc": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+    "lang": "TypeScript",
+    "stars": 18639,
+    "forks": 1914,
+    "gained": 790
+   },
+   {
+    "rank": 2,
+    "repo": "backnotprop/plannotator",
+    "id": 1123956658,
+    "desc": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+    "lang": "TypeScript",
+    "stars": 12365,
+    "forks": 1164,
+    "gained": 689
+   },
+   {
+    "rank": 3,
+    "repo": "dream-num/univer",
+    "id": 543101941,
+    "desc": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+    "lang": "TypeScript",
+    "stars": 27616,
+    "forks": 2514,
+    "gained": 1878
+   },
+   {
+    "rank": 4,
+    "repo": "google-labs-code/stitch-skills",
+    "id": 1135847870,
+    "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+    "lang": "TypeScript",
+    "stars": 9649,
+    "forks": 1208,
+    "gained": 540
+   },
+   {
+    "rank": 5,
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "id": 1054793726,
+    "desc": "Chrome DevTools for coding agents",
+    "lang": "TypeScript",
+    "stars": 57538,
+    "forks": 4842,
+    "gained": 837
+   },
+   {
+    "rank": 6,
+    "repo": "motion-canvas/motion-canvas",
+    "id": 520955562,
+    "desc": "Visualize Your Ideas With Code",
+    "lang": "TypeScript",
+    "stars": 19973,
+    "forks": 916,
+    "gained": 39
+   },
+   {
+    "rank": 7,
+    "repo": "GoogleChrome/modern-web-guidance-src",
+    "id": 1143633223,
+    "desc": "Keep your coding agent up to date with the latest web best practices",
+    "lang": "TypeScript",
+    "stars": 7858,
+    "forks": 689,
+    "gained": 1200
+   },
+   {
+    "rank": 8,
+    "repo": "s0ld13rr/pentestcode",
+    "id": 1293290940,
+    "desc": "PentestCode - Multi-agent AI penetration testing system with persistent engagement state, strategic coordination, and parallel autonomous operations.",
+    "lang": "TypeScript",
+    "stars": 1082,
+    "forks": 174,
+    "gained": 34
+   },
+   {
+    "rank": 9,
+    "repo": "elie222/rakazo",
+    "id": 1332781509,
+    "desc": "Open-source Grok Bot alternative. Choose your own model and sandbox.",
+    "lang": "TypeScript",
+    "stars": 8802,
+    "forks": 1577,
+    "gained": 271
+   },
+   {
+    "rank": 10,
+    "repo": "nestjs/nest",
+    "id": 80945428,
+    "desc": "A progressive TypeScript framework for Node.js backends: from a small API in one file to efficient, scalable, enterprise-grade systems 🚀",
+    "lang": "TypeScript",
+    "stars": 77079,
+    "forks": 8720,
+    "gained": 29
+   },
+   {
+    "rank": 11,
+    "repo": "esengine/estella",
+    "id": 1141663444,
+    "desc": "A fast 2D and 3D game engine — TypeScript SDK, C++/WebAssembly core, visual editor. Ship one project to web, desktop, WeChat MiniGames, playable ads, and native Android / iOS.",
+    "lang": "TypeScript",
+    "stars": 931,
+    "forks": 164,
+    "gained": 37
+   },
+   {
+    "rank": 12,
+    "repo": "koala73/worldmonitor",
+    "id": 1130564872,
+    "desc": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+    "lang": "TypeScript",
+    "stars": 90753,
+    "forks": 14090,
+    "gained": 76
+   },
+   {
+    "rank": 13,
+    "repo": "hieunc229/mailflare",
+    "id": 1249703818,
+    "desc": "Email for professionals and teams",
+    "lang": "TypeScript",
+    "stars": 6619,
+    "forks": 1126,
+    "gained": 253
+   },
+   {
+    "rank": 14,
+    "repo": "angular/angular",
+    "id": 24195339,
+    "desc": "Deliver web apps with confidence 🚀",
+    "lang": "TypeScript",
+    "stars": 101430,
+    "forks": 28191,
+    "gained": 29
+   }
+  ],
+  "javascript:daily": [
+   {
+    "rank": 1,
+    "repo": "DeanChensj/jiangshan-map",
+    "id": 1310427454,
+    "desc": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+    "lang": "JavaScript",
+    "stars": 6618,
+    "forks": 749,
+    "gained": 285
+   },
+   {
+    "rank": 2,
+    "repo": "sveltejs/svelte",
+    "id": 74293321,
+    "desc": "web development for the rest of us",
+    "lang": "JavaScript",
+    "stars": 88840,
+    "forks": 6048,
+    "gained": 58
+   },
+   {
+    "rank": 3,
+    "repo": "mrdoob/three.js",
+    "id": 576201,
+    "desc": "JavaScript 3D Library.",
+    "lang": "JavaScript",
+    "stars": 118644,
+    "forks": 37005,
+    "gained": 130
+   },
+   {
+    "rank": 4,
+    "repo": "axios/axios",
+    "id": 23088740,
+    "desc": "Promise based HTTP client for the browser and node.js",
+    "lang": "JavaScript",
+    "stars": 109343,
+    "forks": 12047,
+    "gained": 28
+   },
+   {
+    "rank": 5,
+    "repo": "bilawalsidhu/gods-eye-view",
+    "id": 1277471539,
+    "desc": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+    "lang": "JavaScript",
+    "stars": 65258,
+    "forks": 12890,
+    "gained": 257
+   },
+   {
+    "rank": 6,
+    "repo": "maillab/cloud-mail",
+    "id": 971999086,
+    "desc": "An all-in-one email service platform powered by Cloudflare | 基于 Cloudflare 的一站式邮箱服务平台 | Cloudflare Email 邮箱 Mail",
+    "lang": "JavaScript",
+    "stars": 16271,
+    "forks": 23811,
+    "gained": 316
+   },
+   {
+    "rank": 7,
+    "repo": "affaan-m/ECC",
+    "id": 1136590548,
+    "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "lang": "JavaScript",
+    "stars": 304378,
+    "forks": 44831,
+    "gained": 722
+   },
+   {
+    "rank": 8,
+    "repo": "saadeghi/daisyui",
+    "id": 316836816,
+    "desc": "🌼 🌼 🌼 🌼 🌼 The most popular, free and open-source Tailwind CSS component library",
+    "lang": "JavaScript",
+    "stars": 42856,
+    "forks": 1718,
+    "gained": 11
+   },
+   {
+    "rank": 9,
+    "repo": "hanliang97/MatrixMedia",
+    "id": 1187686777,
+    "desc": "视频矩阵工具 vue electorn puppeteer 批量发布 视频到各个视频平台 自媒体 矩阵 抖音 小红书 头条 视频号 快手等 ai 自动化 cli",
+    "lang": "JavaScript",
+    "stars": 1435,
+    "forks": 218,
+    "gained": 68
+   },
+   {
+    "rank": 10,
+    "repo": "airbnb/lottie-web",
+    "id": 31085130,
+    "desc": "Render After Effects animations natively on Web, Android and iOS, and React Native. http://airbnb.io/lottie/",
+    "lang": "JavaScript",
+    "stars": 32476,
+    "forks": 2978,
+    "gained": 22
+   },
+   {
+    "rank": 11,
+    "repo": "jessepinkman9900/claude-second-brain",
+    "id": 1208153223,
+    "desc": "Fastest way to scaffold your LLM powered personal knowledge base - Obsidian, Claude Code, qmd, Github",
+    "lang": "JavaScript",
+    "stars": 166,
+    "forks": 23,
+    "gained": 14
+   },
+   {
+    "rank": 12,
+    "repo": "juliangarnier/anime",
+    "id": 53809090,
+    "desc": "JavaScript animation engine",
+    "lang": "JavaScript",
+    "stars": 74807,
+    "forks": 5114,
+    "gained": 99
+   },
+   {
+    "rank": 13,
+    "repo": "byoungd/up",
+    "id": 92807616,
+    "desc": "韩先凯的人生进阶指南 AI时代 中英双语终身学习指南：AI、学习 、创业、财富、爱情与人生",
+    "lang": "JavaScript",
+    "stars": 70621,
+    "forks": 7028,
+    "gained": 59
+   }
+  ],
+  "go:daily": [
+   {
+    "rank": 1,
+    "repo": "getarcaneapp/arcane",
+    "id": 968905557,
+    "desc": "Modern Docker Management, Designed for Everyone",
+    "lang": "Go",
+    "stars": 8535,
+    "forks": 365,
+    "gained": 31
+   },
+   {
+    "rank": 2,
+    "repo": "alibaba/open-code-review",
+    "id": 1241960226,
+    "desc": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+    "lang": "Go",
+    "stars": 52787,
+    "forks": 4244,
+    "gained": 946
+   },
+   {
+    "rank": 3,
+    "repo": "Tencent/LoopForge",
+    "id": 1314510108,
+    "desc": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+    "lang": "Go",
+    "stars": 2267,
+    "forks": 348,
+    "gained": 1016
+   },
+   {
+    "rank": 4,
+    "repo": "Asymptote-Labs/agent-beacon",
+    "id": 1236183038,
+    "desc": "The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu",
+    "lang": "Go",
+    "stars": 3527,
+    "forks": 317,
+    "gained": 33
+   },
+   {
+    "rank": 5,
+    "repo": "kubescape/kubescape",
+    "id": 395283401,
+    "desc": "Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes users and administrators precious time, effort, and resources.",
+    "lang": "Go",
+    "stars": 11937,
+    "forks": 1111,
+    "gained": 26
+   },
+   {
+    "rank": 6,
+    "repo": "Billionmail/BillionMail",
+    "id": 932580333,
+    "desc": "BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr",
+    "lang": "Go",
+    "stars": 16388,
+    "forks": 1831,
+    "gained": 54
+   },
+   {
+    "rank": 7,
+    "repo": "gnacho/netpulse",
+    "id": 1318413093,
+    "desc": "PWA dashboard for monitoring OpenWrt/GL.iNet home networks: fleet status, per-router health, devices, WireGuard peers, AdGuard Home stats and alerts in real time (SSE). Go backend + React 19 frontend, SQLite, multi-user, i18n ES/EN.",
+    "lang": "Go",
+    "stars": 336,
+    "forks": 22,
+    "gained": 36
+   },
+   {
+    "rank": 8,
+    "repo": "agent-substrate/substrate",
+    "id": 1238047523,
+    "desc": "Agent Substrate: the core system",
+    "lang": "Go",
+    "stars": 6868,
+    "forks": 765,
+    "gained": 127
+   },
+   {
+    "rank": 9,
+    "repo": "openbkn-ai/bkn-foundry",
+    "id": 1250040582,
+    "desc": "BKN Foundry is the Ontology back-end foundation of OpenBKN. It transforms ontology-driven business semantics into runtime services: data, logic, actions, security governance, and observability.",
+    "lang": "Go",
+    "stars": 1399,
+    "forks": 139,
+    "gained": 48
+   },
+   {
+    "rank": 10,
+    "repo": "golang/go",
+    "id": 23096959,
+    "desc": "The Go programming language",
+    "lang": "Go",
+    "stars": 139919,
+    "forks": 20254,
+    "gained": 102
+   },
+   {
+    "rank": 11,
+    "repo": "docker/compose",
+    "id": 15045751,
+    "desc": "Define and run multi-container applications with Docker",
+    "lang": "Go",
+    "stars": 38863,
+    "forks": 5984,
+    "gained": 90
+   },
+   {
+    "rank": 12,
+    "repo": "kubernetes/kubernetes",
+    "id": 20580498,
+    "desc": "Production-Grade Container Scheduling and Management",
+    "lang": "Go",
+    "stars": 129097,
+    "forks": 45087,
+    "gained": 105
+   },
+   {
+    "rank": 13,
+    "repo": "HuskerMinion/techo5",
+    "id": 1370660373,
+    "desc": "Open firmware for the Echo Show 5, 1st and 2nd gen: Alpine Linux instead of Android, no Alexa. A local Home Assistant voice satellite with its own touch screen, on-device wake word, SSH and A/B over-the-air updates.",
+    "lang": "Go",
+    "stars": 716,
+    "forks": 120,
+    "gained": 26
+   },
+   {
+    "rank": 14,
+    "repo": "dagucloud/dagu",
+    "id": 484434975,
+    "desc": "Self-hostable workflow orchestrator for teams whose main work isn't orchestration. Declarative YAML over your scripts, SSH commands, containers, etc; keep workflows separate from business logic. One binary, no database, runs on limited H/W resources. Alternative to Airflow / Cron / Job Scheduler.",
+    "lang": "Go",
+    "stars": 4617,
+    "forks": 403,
+    "gained": 8
+   },
+   {
+    "rank": 15,
+    "repo": "erigontech/erigon",
+    "id": 188836864,
+    "desc": "Ethereum implementation on the efficiency frontier",
+    "lang": "Go",
+    "stars": 3636,
+    "forks": 1581,
+    "gained": 7
+   }
+  ],
+  "rust:daily": [
+   {
+    "rank": 1,
+    "repo": "ModernRelay/omnigraph",
+    "id": 1207219415,
+    "desc": "Object-storage native graph database with branching and typed ontology",
+    "lang": "Rust",
+    "stars": 2782,
+    "forks": 326,
+    "gained": 228
+   },
+   {
+    "rank": 2,
+    "repo": "lance-format/lance",
+    "id": 511691380,
+    "desc": "Open Lakehouse Format for Multimodal AI. Convert from Parquet in 2 lines of code for 100x faster random access, vector index, and data versioning. Compatible with Pandas, DuckDB, Polars, Pyarrow, and PyTorch with more integrations coming..",
+    "lang": "Rust",
+    "stars": 7333,
+    "forks": 944,
+    "gained": 18
+   },
+   {
+    "rank": 3,
+    "repo": "xai-org/x-algorithm",
+    "id": 1137846174,
+    "desc": "Algorithm powering the For You feed on X",
+    "lang": "Rust",
+    "stars": 34253,
+    "forks": 5517,
+    "gained": 24
+   },
+   {
+    "rank": 4,
+    "repo": "martin-olivier/airgorah",
+    "id": 543516398,
+    "desc": "A WiFi security auditing software",
+    "lang": "Rust",
+    "stars": 6458,
+    "forks": 1078,
+    "gained": 267
+   },
+   {
+    "rank": 5,
+    "repo": "sharkdp/bat",
+    "id": 130464961,
+    "desc": "A cat(1) clone with wings.",
+    "lang": "Rust",
+    "stars": 61282,
+    "forks": 2373,
+    "gained": 24
+   },
+   {
+    "rank": 6,
+    "repo": "biomejs/biome",
+    "id": 671654508,
+    "desc": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.",
+    "lang": "Rust",
+    "stars": 26114,
+    "forks": 1404,
+    "gained": 7
+   },
+   {
+    "rank": 7,
+    "repo": "astral-sh/uv",
+    "id": 699532645,
+    "desc": "An extremely fast Python package and project manager, written in Rust.",
+    "lang": "Rust",
+    "stars": 92007,
+    "forks": 3841,
+    "gained": 68
+   },
+   {
+    "rank": 8,
+    "repo": "rust-lang/rust",
+    "id": 724712,
+    "desc": "Empowering everyone to build reliable and efficient software.",
+    "lang": "Rust",
+    "stars": 122019,
+    "forks": 16662,
+    "gained": 160
+   },
+   {
+    "rank": 9,
+    "repo": "yynxxxxx/Codex-X",
+    "id": 1288848940,
+    "desc": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+    "lang": "Rust",
+    "stars": 4539,
+    "forks": 593,
+    "gained": 17
+   },
+   {
+    "rank": 10,
+    "repo": "rust-lang/rust-clippy",
+    "id": 26850443,
+    "desc": "A bunch of lints to catch common mistakes and improve your Rust code. Book: https://doc.rust-lang.org/clippy/",
+    "lang": "Rust",
+    "stars": 13671,
+    "forks": 2323,
+    "gained": 9
+   },
+   {
+    "rank": 11,
+    "repo": "lapce/lapce",
+    "id": 120425779,
+    "desc": "Lightning-fast and Powerful Code Editor written in Rust",
+    "lang": "Rust",
+    "stars": 39066,
+    "forks": 1367,
+    "gained": 16
+   }
+  ],
+  "java:daily": [
+   {
+    "rank": 1,
+    "repo": "cabaletta/baritone",
+    "id": 143175496,
+    "desc": "google maps for block game",
+    "lang": "Java",
+    "stars": 9360,
+    "forks": 2084,
+    "gained": 5
+   },
+   {
+    "rank": 2,
+    "repo": "FCL-Team/FoldCraftLauncher",
+    "id": 554140954,
+    "desc": "Fold Craft Launcher, an Android Minecraft : Java Edition launcher.",
+    "lang": "Java",
+    "stars": 5211,
+    "forks": 386,
+    "gained": 10
+   },
+   {
+    "rank": 3,
+    "repo": "termux/termux-app",
+    "id": 44804216,
+    "desc": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
+    "lang": "Java",
+    "stars": 64998,
+    "forks": 8328,
+    "gained": 82
+   },
+   {
+    "rank": 4,
+    "repo": "LiteLDev/LeviLauncher-Android",
+    "id": 958098700,
+    "desc": "LeviLauncher for Android",
+    "lang": "Java",
+    "stars": 718,
+    "forks": 199,
+    "gained": 10
+   },
+   {
+    "rank": 5,
+    "repo": "elastic/elasticsearch",
+    "id": 507775,
+    "desc": "Free and Open Source, Distributed, RESTful Search Engine",
+    "lang": "Java",
+    "stars": 78638,
+    "forks": 26219,
+    "gained": 35
+   },
+   {
+    "rank": 6,
+    "repo": "ashishps1/awesome-low-level-design",
+    "id": 719980575,
+    "desc": "Learn Low Level Design (LLD) and prepare for interviews using free resources.",
+    "lang": "Java",
+    "stars": 28111,
+    "forks": 6709,
+    "gained": 35
+   },
+   {
+    "rank": 7,
+    "repo": "jean-voila/FeurStagram",
+    "id": 1125348758,
+    "desc": "Instagram without Reels, feed or ads: an open-source, updatable Instagram app for Android that keeps DMs and stories.",
+    "lang": "Java",
+    "stars": 1361,
+    "forks": 83,
+    "gained": 74
+   },
+   {
+    "rank": 8,
+    "repo": "LawnchairLauncher/lawnchair",
+    "id": 83799439,
+    "desc": "No clever tagline needed.",
+    "lang": "Java",
+    "stars": 13954,
+    "forks": 1816,
+    "gained": 11
+   },
+   {
+    "rank": 9,
+    "repo": "mlmvpn/mlmvpn_android",
+    "id": 1267291874,
+    "desc": "Multi-engine Android VPN — Xray, WARP, Psiphon, Tor, Geph, OpenVPN, MASQUE/AmneziaWG, and the MLM Adaptive Engine that routes each app by its own best path; Cloudflare panels, Config Studio, game booster. Kotlin + Jetpack Compose. | اپلیکیشن VPN چندموتورهٔ اندروید با موتور تطبیقی",
+    "lang": "Java",
+    "stars": 730,
+    "forks": 119,
+    "gained": 9
+   },
+   {
+    "rank": 10,
+    "repo": "RikkaApps/Sui",
+    "id": 326360794,
+    "desc": "Modern super user interface implementation on Android.",
+    "lang": "Java",
+    "stars": 4386,
+    "forks": 497,
+    "gained": 6
+   },
+   {
+    "rank": 11,
+    "repo": "yuliskov/SmartTube",
+    "id": 283211901,
+    "desc": "Browse media content with your own rules on Android TV",
+    "lang": "Java",
+    "stars": 36397,
+    "forks": 2336,
+    "gained": 48
+   },
+   {
+    "rank": 12,
+    "repo": "microg/GmsCore",
+    "id": 19082715,
+    "desc": "Free implementation of Play Services",
+    "lang": "Java",
+    "stars": 15339,
+    "forks": 3385,
+    "gained": 12
+   },
+   {
+    "rank": 13,
+    "repo": "00-Evan/shattered-pixel-dungeon",
+    "id": 22486533,
+    "desc": "Shattered Pixel Dungeon is an open-source traditional roguelike dungeon crawler with randomized levels and enemies, and hundreds of items to collect and use. It's based on the source code of Pixel Dungeon, by Watabou.",
+    "lang": "Java",
+    "stars": 6810,
+    "forks": 1745,
+    "gained": 9
+   },
+   {
+    "rank": 14,
+    "repo": "apache/maven",
+    "id": 206483,
+    "desc": "Apache Maven core",
+    "lang": "Java",
+    "stars": 5376,
+    "forks": 3077,
+    "gained": 0
+   },
+   {
+    "rank": 15,
+    "repo": "RikkaApps/Shizuku-API",
+    "id": 328887217,
+    "desc": "The API and the developer guide for Shizuku and Sui.",
+    "lang": "Java",
+    "stars": 2790,
+    "forks": 1342,
+    "gained": 6
+   },
+   {
+    "rank": 16,
+    "repo": "TelegramMessenger/Telegram-Android",
+    "id": 13862381,
+    "desc": "Telegram for Android source",
+    "lang": "Java",
+    "stars": 30302,
+    "forks": 10579,
+    "gained": 8
+   },
+   {
+    "rank": 17,
+    "repo": "floci-io/floci",
+    "id": 1160497244,
+    "desc": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+    "lang": "Java",
+    "stars": 31824,
+    "forks": 3507,
+    "gained": 63
+   }
+  ],
+  "cpp:daily": [
+   {
+    "rank": 1,
+    "repo": "Likely7/Veyra-NRVideo",
+    "id": 1362562155,
+    "desc": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+    "lang": "C++",
+    "stars": 3004,
+    "forks": 238,
+    "gained": 394
+   },
+   {
+    "rank": 2,
+    "repo": "Fincept-Corporation/FinceptTerminal",
+    "id": 849406496,
+    "desc": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+    "lang": "C++",
+    "stars": 33885,
+    "forks": 4868,
+    "gained": 50
+   },
+   {
+    "rank": 3,
+    "repo": "Helldez/BigMoeOnEdge",
+    "id": 1296688895,
+    "desc": "Run MoE models bigger than your RAM. Frontier-size MoE on a phone, laptop, edge. Lossless, on stock llama.cpp. An adaptive streaming optimizer. Any hardware, any OS, any model, any quantization, behind a local OpenAI-compatible server.",
+    "lang": "C++",
+    "stars": 958,
+    "forks": 101,
+    "gained": 83
+   },
+   {
+    "rank": 4,
+    "repo": "boykopovar/AnyPS5",
+    "id": 1322250666,
+    "desc": "Tool for automatic PS5 executables porting to Linux and Windows",
+    "lang": "C++",
+    "stars": 54416,
+    "forks": 5219,
+    "gained": 317
+   },
+   {
+    "rank": 5,
+    "repo": "godotengine/godot",
+    "id": 15634981,
+    "desc": "Godot Engine – Multi-platform 2D and 3D game engine",
+    "lang": "C++",
+    "stars": 120273,
+    "forks": 27539,
+    "gained": 65
+   },
+   {
+    "rank": 6,
+    "repo": "ocornut/imgui",
+    "id": 22067521,
+    "desc": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+    "lang": "C++",
+    "stars": 77131,
+    "forks": 12113,
+    "gained": 16
+   },
+   {
+    "rank": 7,
+    "repo": "deskflow/deskflow",
+    "id": 25135037,
+    "desc": "Share a single keyboard and mouse between multiple computers.",
+    "lang": "C++",
+    "stars": 31251,
+    "forks": 5148,
+    "gained": 88
+   },
+   {
+    "rank": 8,
+    "repo": "stenzek/duckstation",
+    "id": 207245092,
+    "desc": "Fast PlayStation 1 emulator for x86-64/AArch32/AArch64/RV64",
+    "lang": "C++",
+    "stars": 11018,
+    "forks": 993,
+    "gained": 5
+   },
+   {
+    "rank": 9,
+    "repo": "shadps4-emu/shadPS4",
+    "id": 556675672,
+    "desc": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
+    "lang": "C++",
+    "stars": 34235,
+    "forks": 2910,
+    "gained": 57
+   }
+  ]
+ }
+}
